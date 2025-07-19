@@ -25,7 +25,7 @@ const Hero = () => {
         {/* Location and Socials */}
         <div className="mt-8 mx-3 md:mx-0 md:mt-6 flex justify-between text-gray-400 text-sm md:text-base">
           <span className="flex text-gray-500">
-            <img className="w-5 h-5 bg-gray-300" src="/location.svg" />
+            <img className="w-5 h-5 bg-gray-400 rounded" src="/location.svg" />
             &nbsp;Mumbai, India.
           </span>
           <div className="flex gap-2 md:gap-6 mr-2 md:mr-12">
@@ -33,7 +33,7 @@ const Hero = () => {
               className="flex items-center font-medium hover:text-gray-200 active:underline"
               href="https://www.linkedin.com/in/piyush-yadav-a4b164260/"
             >
-              <img className="w-5 h-5 bg-white" src="/linkedin.svg" />
+              <img className="w-5 h-5 bg-white rounded" src="/linkedin.svg" />
               &nbsp;Linkedin
             </a>
             <a
