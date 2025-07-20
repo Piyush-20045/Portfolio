@@ -73,7 +73,7 @@ const Navbar = () => {
             </div>
             <a
               href="#resume"
-              className="px-3 py-1 text-white bg-gray-800 transition-all duration-300 transform shadow-gray-700 shadow hover:bg-gray-700 active:scale-95"
+              className="px-3 py-1 text-white bg-gray-800 transition-all duration-300 shadow hover:bg-gray-700 shadow-amber-100 active:shadow-none active:scale-95"
             >
               Resume
             </a>
