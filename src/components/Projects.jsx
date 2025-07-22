@@ -24,7 +24,7 @@ const Projects = () => {
         {projectsData.map((project, index) => (
           <motion.div
             key={index}
-            className="bg-white dark:bg-gray-800 rounded-xl shadow-amber-100 overflow-hidden hover:shadow-sm transition-shadow duration-300"
+            className="bg-white dark:bg-gray-800 rounded-xl shadow-black dark:shadow-amber-100 overflow-hidden hover:shadow-sm transition-shadow duration-300 shadow-md"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

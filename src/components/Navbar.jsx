@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { LuSun, LuMoon } from "react-icons/lu";
 
 // Navigation Links Component
 const NavLink = ({ href, children }) => (
   <a
     href={href}
-    className="relative group text-gray-600 dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors duration-300"
+    className="relative group font-semibold text-black dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors duration-300"
   >
     {children}
     <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-indigo-500 dark:bg-indigo-400 group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
@@ -13,7 +14,7 @@ const NavLink = ({ href, children }) => (
 );
 
 // Main Navbar Component
-const Navbar = () => {
+const Navbar = ({ darkMode, setDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -34,17 +35,17 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`md:px-14 lg:px-24 bg-amber-950 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`md:px-12 lg:px-28 fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b dark:border-b-white shadow-xl dark:shadow-xl dark:shadow-gray-900 ${
         isScrolled
-          ? "bg-gray-900/80 backdrop-blur-sm shadow-md"
-          : "bg-transparent"
+          ? "dark:bg-gray-900/80 backdrop-blur-sm shadow-2xl dark:shadow-2xl"
+          : "bg-gray-200 dark:bg-gray-950"
       }`}
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <a
-            className="flex items-center gap-1 text-2xl text-white font-bold"
+            className="flex items-center gap-1 text-2xl text-gray-800 dark:text-white font-bold font-logo"
             href="/"
           >
             <motion.img
@@ -63,21 +64,40 @@ const Navbar = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex justify-center items-center space-x-8">
-            <div className=" space-x-8 mx-10">
-              {navLinks.map((link) => (
-                <NavLink key={link.href} href={link.href}>
-                  {link.text}
-                </NavLink>
-              ))}
-            </div>
+          <div className="hidden text-gray-800 dark:text-white md:flex justify-center items-center space-x-12">
+            {/* mapping navlilnks array */}
+            {navLinks.map((link) => (
+              <NavLink key={link.href} href={link.href}>
+                {link.text}
+              </NavLink>
+            ))}
             <a
               href="#resume"
-              className="px-3 py-1 text-white bg-gray-800 transition-all duration-300 shadow hover:bg-gray-700 shadow-amber-100 active:shadow-none active:scale-95"
+              className="px-3 py-1.5 text-white bg-gray-800 transition-all duration-300 rounded shadow-md hover:bg-gray-700 shadow-black dark:shadow dark:shadow-amber-100 active:shadow-none active:scale-95"
             >
               Resume
             </a>
           </div>
+
+          {/* DARK MODE btn */}
+          <button
+            onClick={() => {
+              setDarkMode(!darkMode);
+            }}
+            className={`hidden md:flex w-14 px-1 py-1 rounded-full cursor-pointer shadow shadow-black dark:shadow-white transition-colors duration-300 ease-in-out ${
+              darkMode ? "bg-indigo-600" : "bg-sky-300"
+            }`}
+          >
+            <span
+              className={`p-1 bg-white rounded-full transition-transform duration-400 ${
+                darkMode
+                  ? "translate-x-6 text-yellow-600"
+                  : "translate-x-0 text-blue-700"
+              }`}
+            >
+              {darkMode ? <LuSun /> : <LuMoon />}
+            </span>
+          </button>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
@@ -117,19 +137,37 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className="block py-2 text-gray-600 dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-400"
+              className="block py-2 font-semibold text-gray-600 dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-400 transition-all duration-300 ease-in-out active:scale-95 active:underline"
               onClick={() => setIsOpen(false)}
             >
               {link.text}
             </a>
           ))}
           <a
-            href="#resume"
-            className="bg-indigo-500 text-white px-6 py-2 rounded-full hover:bg-indigo-600 transition-colors duration-300 w-full text-center"
-            onClick={() => setIsOpen(false)}
+              href="#resume"
+              className="mb-9 px-3 py-1.5 text-white bg-gray-800 transition-all duration-300 rounded shadow-md hover:bg-gray-700 shadow-black dark:shadow dark:shadow-amber-100 active:shadow-none active:scale-95"
+              onClick={() => setIsOpen(false)}
+            >
+              Resume
+            </a>
+          <button
+            onClick={() => {
+              setDarkMode(!darkMode);
+            }}
+            className={`w-14 px-1 py-1 rounded-full cursor-pointer shadow shadow-black dark:shadow-white transition-colors duration-300 ease-in-out flex ${
+              darkMode ? "bg-indigo-600" : "bg-sky-300"
+            }`}
           >
-            Resume
-          </a>
+            <span
+              className={`p-1 bg-white rounded-full transition-transform duration-400 ${
+                darkMode
+                  ? "translate-x-6 text-yellow-600"
+                  : "translate-x-0 text-blue-700"
+              }`}
+            >
+              {darkMode ? <LuSun /> : <LuMoon />}
+            </span>
+          </button>
         </div>
       </div>
     </nav>

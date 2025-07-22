@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { frontendSkills, backendSkills, toolSkills } from "../data/skillsData"
+import { frontendSkills, backendSkills, toolSkills } from "../data/skillsData";
 
 // Framer Motion Variants
 const containerVariants = {
@@ -21,7 +21,7 @@ const itemVariants = {
 
 // Reusable SkillGrid Component
 const SkillGrid = ({ title, skills }) => (
-  <div className="p-4 m-1 mb-12 md:mb-0 md:bg-gray-900 flex flex-col items-center rounded-3xl border shadow-md shadow-amber-50">
+  <div className="p-4 m-1 mb-12 md:mb-0 dark:md:bg-gray-900 flex flex-col items-center rounded-3xl border-gray-200 shadow-md shadow-gray-500 dark:shadow-amber-50">
     <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-6 text-center">
       {title}
     </h3>
@@ -35,7 +35,7 @@ const SkillGrid = ({ title, skills }) => (
       {skills.map((skill) => (
         <motion.div
           key={skill.name}
-          className="w-20 h-20 bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md hover:shadow-xl dark:hover:shadow-indigo-500/20 transition-shadow duration-300 flex flex-col items-center justify-center"
+          className="w-20 h-20 bg-gray-50 dark:bg-gray-800 p-3 rounded-lg shadow-md hover:shadow-xl hover:shadow-blue-300 dark:hover:shadow-indigo-500/20 transition-shadow duration-300 flex flex-col items-center justify-center"
           variants={itemVariants}
           initial="hidden"
           whileInView="visible"
@@ -58,7 +58,7 @@ const SkillGrid = ({ title, skills }) => (
 // Main Skills Component
 const Skills = () => {
   return (
-    <section id="skills" className="w-full md:px-14 lg:px-32 py-20 px-4">
+    <section id="skills" className="w-full md:px-12 lg:px-32 py-20 px-4">
       <div className="container mx-auto text-center">
         <motion.h2
           className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4"
