@@ -26,7 +26,7 @@ const Hero = () => {
       <div className="text-center md:text-start ml-3 mr-2">
         {/* TITLE and DESCRIPTION */}
         <h1 className="text-3xl md:text-4xl font-bold text-black dark:text-white">
-          Hey, I'm Piyush. <br />{" "}
+          Hey, I'm Piyush Yadav. <br />{" "}
           <span className="text-gray-800 dark:text-gray-300">
             A Full-Stack Software Developer.
           </span>

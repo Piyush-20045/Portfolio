@@ -1,6 +1,6 @@
-import blognest from "../assets/projects/blognest.png";
-import myJournal from "../assets/projects/myJournal.png";
-import portfolio from "../assets/projects/portfolio.png";
+import blognest from "../assets/projects/blognest.PNG";
+import myJournal from "../assets/projects/myJournal.PNG";
+import portfolio from "../assets/projects/portfolio.PNG";
 
 export const projectsData = [
   {
