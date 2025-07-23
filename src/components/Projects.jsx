@@ -3,18 +3,18 @@ import { projectsData } from "../data/projectsData";
 
 const Projects = () => {
   return (
-    <section id="projects" className="w-full md:px-14 lg:px-36 px-4 py-20">
+    <section id="projects" className="w-full md:px-14 lg:px-36 px-4 py-20 scroll-mt-8">
       <motion.div
         className="text-center mb-14"
-        initial={{ opacity: 0, y: -20 }}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
           My Creative Work
         </h2>
-        <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-800 dark:text-gray-300 font-semibold max-w-2xl mx-auto">
           Here are some of the projects I'm proud of. Each one was a unique
           challenge and a great learning experience.
         </p>
@@ -40,7 +40,7 @@ const Projects = () => {
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                 {project.title}
               </h3>
-              <p className="h-32 md:h-28 text-gray-600 dark:text-gray-300">
+              <p className="h-32 md:h-28 text-gray-700 dark:text-gray-300 font-medium">
                 {project.description}
               </p>
               <div className="flex flex-wrap gap-2 text-xs mb-8">

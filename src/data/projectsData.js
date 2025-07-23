@@ -1,5 +1,6 @@
 import blognest from "../assets/projects/blognest.png";
 import myJournal from "../assets/projects/myJournal.png";
+import portfolio from "../assets/projects/portfolio.png";
 
 export const projectsData = [
   {
@@ -21,7 +22,7 @@ export const projectsData = [
   {
     title: "Portfolio Website",
     description: "A personal portfolio website to showcase my skills and projects. Designed to be fast, responsive, and visually appealing, with a focus on user experience.",
-    image: "https://placehold.co/600x400/166534/ffffff?text=Project+3",
+    image: portfolio,
     tags: ["Vite", "React", "Tailwind CSS", "Framer Motion"],
     liveUrl: "/",
     githubUrl: "https://github.com/Piyush-20045/Portfolio",

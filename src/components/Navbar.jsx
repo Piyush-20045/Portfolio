@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { animate, motion } from "framer-motion";
 import { LuSun, LuMoon } from "react-icons/lu";
 
 // Navigation Links Component
@@ -29,13 +29,14 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
   const navLinks = [
     { href: "#home", text: "Home" },
+    { href: "#skills", text: "Skills" },
     { href: "#projects", text: "Projects" },
     { href: "#contact", text: "Contact" },
   ];
 
   return (
     <nav
-      className={`md:px-12 lg:px-28 fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b dark:border-b-white shadow-xl dark:shadow-xl dark:shadow-gray-900 ${
+      className={`lg:px-24 fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b dark:border-b-white shadow-xl dark:shadow-xl dark:shadow-gray-900 ${
         isScrolled
           ? "dark:bg-gray-900/80 backdrop-blur-sm shadow-2xl dark:shadow-2xl"
           : "bg-gray-200 dark:bg-gray-950"
@@ -44,27 +45,32 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <a
+          <motion.a
             className="flex items-center gap-1 text-2xl text-gray-800 dark:text-white font-bold font-logo"
-            href="/"
+            href="#home"
+            whileHover="hover"
+            rotate="rest"
           >
             <motion.img
               className="h-10 w-10 rounded-full"
               src="/logo.jpeg"
-              whileHover={{
-                rotate: 360,
-                transition: {
-                  repeat: Infinity,
-                  duration: 1,
-                  ease: "linear",
+              variants={{
+                hover: {
+                  rotate: 360,
+                  transition: {
+                    repeat: Infinity,
+                    duration: 1,
+                    ease: "linear",
+                  },
+                  rest: { rotate: 0 },
                 },
               }}
             />
             Piyush
-          </a>
+          </motion.a>
 
           {/* Desktop Navigation */}
-          <div className="hidden text-gray-800 dark:text-white md:flex justify-center items-center space-x-12">
+          <div className="hidden pl-20 text-gray-800 dark:text-white md:flex justify-center items-center space-x-7 lg:space-x-12">
             {/* mapping navlilnks array */}
             {navLinks.map((link) => (
               <NavLink key={link.href} href={link.href}>
@@ -128,7 +134,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden transition-all duration-500 ease-in-out overflow-hidden ${
+        className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
           isOpen ? "max-h-screen" : "max-h-0"
         }`}
       >
@@ -144,12 +150,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             </a>
           ))}
           <a
-              href="#resume"
-              className="mb-9 px-3 py-1.5 text-white bg-gray-800 transition-all duration-300 rounded shadow-md hover:bg-gray-700 shadow-black dark:shadow dark:shadow-amber-100 active:shadow-none active:scale-95"
-              onClick={() => setIsOpen(false)}
-            >
-              Resume
-            </a>
+            href="#resume"
+            className="mb-9 px-3 py-1.5 text-white bg-gray-800 transition-all duration-300 rounded shadow-md hover:bg-gray-700 shadow-black dark:shadow dark:shadow-amber-100 active:shadow-none active:scale-95"
+            onClick={() => setIsOpen(false)}
+          >
+            Resume
+          </a>
           <button
             onClick={() => {
               setDarkMode(!darkMode);

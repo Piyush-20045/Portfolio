@@ -10,25 +10,25 @@ import { useRef } from "react";
 const socialLinks = [
   {
     icon: <SiGmail />,
-    href: "#",
+    href: "mailto:piyushyadav20045@gmail.com",
     label: "Gmail",
     hoverColor: "hover:text-red-600",
   },
   {
     icon: <FaLinkedin />,
-    href: "#",
+    href: "https://tinyurl.com/yPiyush",
     label: "Linkedin",
     hoverColor: "hover:text-blue-700",
   },
   {
     icon: <FaGithub />,
-    href: "#",
+    href: "https://github.com/Piyush-20045",
     label: "Github",
     hoverColor: "hover:text-black dark:hover:text-gray-400",
   },
   {
     icon: <FaTwitterSquare />,
-    href: "#",
+    href: "https://x.com/Piyush9436",
     label: "Twitter",
     hoverColor: "hover:text-sky-500",
   },
@@ -61,23 +61,36 @@ const Contact = () => {
     tap: { scale: 0.9 },
   };
   return (
-    <div className="pt-20 pb-8 flex flex-col justify-center items-center">
+    <div
+      id="contact"
+      className="pt-20 pb-8 flex flex-col justify-center items-center scroll-mt-8"
+    >
       {/* TITLE and DESCRIPTION */}
-      <div className="mb-4 text-center">
+      <motion.div
+        className="mb-4 text-center"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
         <h2 className="text-4xl font-bold text-gray-800 dark:text-gray-200">
           Get In Touch
         </h2>
-        <p className="mt-1 text-lg font-medium text-gray-800 dark:text-gray-200">
+        <p className="mt-2 text-lg font-medium text-gray-800 dark:text-gray-200">
           Have a project in mind or just want to say hi? I'd love to hear from
           you.
         </p>
-      </div>
+      </motion.div>
 
       {/* FORM */}
-      <form
+      <motion.form
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
         ref={form}
         onSubmit={sendMail}
-        className="w-11/12 md:w-4/6 lg:w-3/6 mx-3 mt-3 px-4 sm:px-6 md:px-12 py-8 flex flex-col gap-4 border border-gray-400 rounded-2xl bg-gray-200 dark:bg-gray-800"
+        className="w-11/12 md:w-4/6 lg:w-3/6 mx-3 mt-5 px-4 sm:px-6 md:px-12 py-8 flex flex-col gap-4 border border-gray-400 rounded-2xl bg-gray-200 dark:bg-gray-800"
       >
         <div className="flex flex-col ">
           <label className="mb-2 font-semibold text-gray-700 dark:text-gray-100">
@@ -150,7 +163,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               data-tooltip-id="social-tooltip"
               data-tooltip-content={social.label}
-              className={`text-gray-700 dark:text-white text-4xl transition-colors duration-300 ${social.hoverColor}`}
+              className={`text-gray-700 dark:text-white text-3xl md:text-4xl transition-colors duration-300 ${social.hoverColor}`}
               whileHover="hover"
               whileTap="tap"
             >
@@ -159,7 +172,7 @@ const Contact = () => {
           ))}
         </div>
         <Tooltip id="social-tooltip" />
-      </form>
+      </motion.form>
       {/* FOOTER */}
       <footer className="text-center mt-16 mx-9 text-sm md:text-base font-semibold text-gray-700 dark:text-gray-400">
         Thanks for scrolling! 👋 - Built by Piyush Yadav © 2025
