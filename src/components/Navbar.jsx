@@ -6,7 +6,7 @@ import { LuSun, LuMoon } from "react-icons/lu";
 const NavLink = ({ href, children }) => (
   <a
     href={href}
-    className="relative group font-semibold text-black dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors duration-300"
+    className="relative group font-semibold text-black dark:text-white hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors duration-300"
   >
     {children}
     <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-indigo-500 dark:bg-indigo-400 group-hover:w-full group-hover:left-0 transition-all duration-300"></span>

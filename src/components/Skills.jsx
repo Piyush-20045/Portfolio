@@ -35,7 +35,7 @@ const SkillGrid = ({ title, skills }) => (
       {skills.map((skill) => (
         <motion.div
           key={skill.name}
-          className="w-20 h-20 bg-gray-50 dark:bg-gray-800 p-3 rounded-lg shadow-md hover:shadow-xl hover:shadow-blue-300 dark:hover:shadow-indigo-500/20 transition-shadow duration-300 flex flex-col items-center justify-center"
+          className="w-20 h-20 bg-gray-50 dark:bg-gray-700 p-3 rounded-lg shadow-md hover:shadow-xl hover:shadow-blue-300 dark:hover:shadow-indigo-500/20 transition-shadow duration-300 flex flex-col items-center justify-center"
           variants={itemVariants}
           initial="hidden"
           whileInView="visible"
