@@ -15,12 +15,6 @@ dist-ssr
 # env file
 .env
 
-# Ignore Lightwind source code
-src/ui/lightswind/
-src/ui/lib/
-src/ui/hooks/
-src/ui/lightswind.css
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
