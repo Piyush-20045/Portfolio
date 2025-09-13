@@ -1,6 +1,7 @@
 import blognest from "../assets/projects/blognest.PNG";
 import myJournal from "../assets/projects/myJournal.PNG";
 import portfolio from "../assets/projects/portfolio.PNG";
+import campX from "../assets/projects/CampX.PNG";
 
 export const projectsData = [
   {
@@ -10,6 +11,14 @@ export const projectsData = [
     tags: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB", "Clerk(Auth)"],
     liveUrl: "https://blognest-nu.vercel.app/",
     githubUrl: "https://github.com/Piyush-20045/BlogNest",
+  },
+  {
+    title: "CampX",
+    description: "CampX is a full-stack MERN application where users can explore, add, and review campgrounds. It’s built with modern web technologies and demonstrates authentication, CRUD operations, state management with redux toolkit.", 
+    image: campX,
+    tags: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB", "JWT", "Redux Toolkit"],
+    liveUrl: "https://campx-py.vercel.app/",
+    githubUrl: "https://github.com/Piyush-20045/CampX",
   },
   {
     title: "MyJournal",
