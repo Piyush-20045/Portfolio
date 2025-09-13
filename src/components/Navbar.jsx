@@ -39,7 +39,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       className={`lg:px-24 fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b dark:border-b-white shadow-xl dark:shadow-xl dark:shadow-gray-900 ${
         isScrolled
           ? "dark:bg-gray-900/80 backdrop-blur-sm shadow-2xl dark:shadow-2xl"
-          : "bg-gray-200 dark:bg-gray-950"
+          : "bg-gray-100 dark:bg-gray-950"
       }`}
     >
       <div className="container mx-auto px-6 py-4">

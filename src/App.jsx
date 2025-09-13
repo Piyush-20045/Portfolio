@@ -17,7 +17,7 @@ function App() {
   }, [darkMode]);
 
   return (
-    <div className={`${darkMode ? "dark" : ""} bg-gray-100 dark:bg-gray-950 transition-all duration-300`} >
+    <div className={`${darkMode ? "dark" : ""} bg-gray-50 dark:bg-gray-950 transition-all duration-300`} >
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <Hero />
       <Skills />
