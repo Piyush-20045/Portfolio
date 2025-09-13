@@ -1,7 +1,7 @@
 import blognest from "../assets/projects/blognest.PNG";
 import myJournal from "../assets/projects/myJournal.PNG";
 import portfolio from "../assets/projects/portfolio.PNG";
-import campX from "../assets/projects/CampX.PNG";
+import campX from "../assets/projects/CampX.png";
 
 export const projectsData = [
   {
