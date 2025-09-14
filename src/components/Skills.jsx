@@ -84,7 +84,7 @@ const Skills = () => {
           viewport={{ once: true }}
         >
           From frontend frameworks to backend databases and dev tools, here's
-          what I use to bring web ideas to life.
+          what I use.
         </motion.p>
 
         <div className="md:flex">

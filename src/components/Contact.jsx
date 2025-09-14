@@ -90,7 +90,7 @@ const Contact = () => {
         viewport={{ once: true }}
         ref={form}
         onSubmit={sendMail}
-        className="w-11/12 md:w-4/6 lg:w-3/6 mx-3 mt-5 px-4 sm:px-6 md:px-12 py-8 flex flex-col gap-4 border border-gray-400 rounded-2xl bg-gray-200 dark:bg-gray-900"
+        className="w-11/12 md:w-4/6 lg:w-3/6 mx-3 mt-5 px-4 sm:px-6 md:px-12 py-8 flex flex-col gap-4 border border-gray-400 rounded-2xl bg-gray-300 dark:bg-gray-900"
       >
         <div className="flex flex-col ">
           <label className="mb-2 font-semibold text-gray-700 dark:text-gray-100">
@@ -100,7 +100,7 @@ const Contact = () => {
             type="text"
             name="user_name"
             placeholder="Your Name"
-            className="block w-full p-3 bg-gray-50 border border-gray-300 rounded-lg focus:outline-blue-600"
+            className="block w-full p-3 bg-gray-50 dark:bg-gray-200 border border-gray-300 rounded-lg focus:outline-blue-600"
             required
           />
         </div>
@@ -112,7 +112,7 @@ const Contact = () => {
             type="email"
             name="user_email"
             placeholder="Your Email"
-            className="block w-full p-3 bg-gray-50 border border-gray-300 rounded-lg  focus:outline-blue-600"
+            className="block w-full p-3 bg-gray-50 dark:bg-gray-200 border border-gray-300 rounded-lg  focus:outline-blue-600"
             required
           />
         </div>
@@ -124,7 +124,7 @@ const Contact = () => {
             name="message"
             rows="4"
             placeholder="Your message here..."
-            className="block w-full p-3 bg-gray-50 border border-gray-300 rounded-lg resize-none focus:outline-blue-600"
+            className="block w-full p-3 bg-gray-50 dark:bg-gray-200 border border-gray-300 rounded-lg resize-none focus:outline-blue-600"
             required
           ></textarea>
         </div>
@@ -143,7 +143,7 @@ const Contact = () => {
               className="absolute inset-0 flex items-center"
               aria-hidden="true"
             >
-              <div className="w-full border-t border-gray-300" />
+              <div className="w-full border-t border-gray-400" />
             </div>
             <div className="relative flex justify-center text-sm">
               <span className="px-3 bg-white text-gray-500 font-medium">

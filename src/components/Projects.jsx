@@ -36,24 +36,24 @@ const Projects = () => {
               alt={project.title}
               className="w-full h-48 object-cover"
             />
-            <div className="p-5">
+            <div className="h-fit p-5">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 {project.title}
               </h3>
-              <p className="h-32 md:h-28 text-gray-700 dark:text-gray-300 font-medium">
+              <p className="text-gray-700 dark:text-gray-300 font-medium">
                 {project.description}
               </p>
-              <div className="flex flex-wrap gap-2 text-xs mb-8">
+              <div className="h-14 mt-3 flex flex-wrap gap-2 text-xs">
                 {project.tags.map((tech, i) => (
                   <span
                     key={i}
-                    className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-gray-800 dark:text-gray-200"
+                    className="h-fit px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded text-gray-800 dark:text-gray-200"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
-              <div className="h-12 flex justify-between">
+              <div className="mt-6 h-12 flex justify-between">
                 <a
                   href={project.liveUrl}
                   className="px-2 flex items-center gap-1 font-medium bg-gradient-to-r from-indigo-500 to-purple-500 text-sm text-white rounded cursor-pointer transition-all hover:underline shadow-purple-100 hover:shadow-sm active:scale-95 select-none"

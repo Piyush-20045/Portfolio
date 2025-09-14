@@ -28,9 +28,9 @@ function App() {
         dotSize={1}
         dotColor="#d4d4d4"
         darkDotColor="#404040"
-        spacing={25}
+        spacing={30}
         showFade={true}
-        fadeIntensity={40}
+        fadeIntensity={80}
         className="h-full"
       >
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
