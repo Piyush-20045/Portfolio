@@ -36,9 +36,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
   return (
     <nav
-      className={`lg:px-24 fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b dark:border-b-white shadow-xl dark:shadow-xl dark:shadow-gray-900 ${
+      className={`lg:px-24 fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b dark:border-b-white shadow-xl dark:shadow-lg dark:shadow-gray-900 ${
         isScrolled
-          ? "dark:bg-gray-900/80 backdrop-blur-sm shadow-2xl dark:shadow-2xl"
+          ? "dark:bg-gray-900/80 backdrop-blur-sm shadow-2xl"
           : "bg-gray-100 dark:bg-gray-950"
       }`}
     >
@@ -138,12 +138,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           isOpen ? "max-h-screen" : "max-h-0"
         }`}
       >
-        <div className="bg-white dark:bg-gray-900 px-6 py-2 pb-4 flex flex-col items-center space-y-4">
+        <div className="backdrop-blur-sm px-6 py-2 pb-4 flex flex-col items-center space-y-4">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="block py-2 font-semibold text-gray-600 dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-400 transition-all duration-300 ease-in-out active:scale-95 active:underline"
+              className="block py-2 font-semibold text-gray-700 dark:text-gray-300 transition-all duration-300 ease-in-out active:scale-95 active:underline"
               onClick={() => setIsOpen(false)}
             >
               {link.text}
