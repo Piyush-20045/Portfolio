@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { projectsData } from "../data/projectsData";
+import { Lens } from "../ui/lightswind/lens";
 
 const Projects = () => {
   return (
@@ -31,11 +32,13 @@ const Projects = () => {
             transition={{ delay: index * 0.1, duration: 1, type: "spring" }}
             whileHover={{ scale: 1.02 }}
           >
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-48 object-cover"
-            />
+            <Lens zoomFactor={2} lensSize={150}>
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-48 object-cover"
+              />
+            </Lens>
             <div className="h-fit p-5">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 {project.title}
