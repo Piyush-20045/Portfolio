@@ -1,5 +1,6 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { TypingText } from "../ui/lightswind/typing-text";
 
 const Hero = () => {
   // FRAMER MOTION VARIANTS
@@ -17,18 +18,36 @@ const Hero = () => {
       className="min-h-screen flex flex-col md:flex-row justify-center items-center md:gap-5 text-gray-800 dark:text-gray-200"
     >
       {/* Profile Image with Gradient Border */}
-      <div className="md:mb-0 mb-5 w-fit p-1 rounded-full bg-gradient-to-r from-orange-500 via-red-500 to-purple-500">
+      <motion.div
+        initial={{ opacity: 0, x: -40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="md:mb-0 mb-5 w-fit p-1 rounded-full bg-gradient-to-tl from-blue-700 via-blue-300 dark:via-blue-200 to-purple-700"
+      >
         <img
           className="w-36 md:w-52 bg-gray-500 rounded-full border-white border-4 transition-all duration-300 hover:scale-105 cursor-pointer"
           src="/hero.jpeg"
         />
-      </div>
-      <div className="text-center md:text-start ml-3 mr-2">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: 40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-center md:text-start ml-3 mr-2"
+      >
         {/* TITLE and DESCRIPTION */}
         <h1 className="text-3xl md:text-4xl font-bold text-black dark:text-white">
           Hey, I'm Piyush Yadav. <br />{" "}
           <span className="text-gray-800 dark:text-gray-300">
-            A Full-Stack Developer.
+            <TypingText
+              duration={2}
+              color="bg-gradient-to-tl from-blue-700 via-blue-500 dark:via-blue-200 to-purple-700 bg-clip-text text-transparent"
+              align="center"
+            >
+              A Full-Stack Developer.
+            </TypingText>
           </span>
         </h1>
         <p className="mt-3 font-semibold dark:font-medium text-lg text-gray-900 dark:text-gray-400 max-w-xl">
@@ -73,7 +92,7 @@ const Hero = () => {
             </motion.a>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
