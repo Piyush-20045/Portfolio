@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { LuSun, LuMoon } from "react-icons/lu";
 
@@ -16,6 +16,25 @@ const NavLink = ({ href, children }) => (
 // Main Navbar Component
 const Navbar = ({ darkMode, setDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [show, setShow] = useState(true);
+
+  // scroll detect logic
+  useEffect(() => {
+    let lastY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+      if (currentY > lastY) setShow(false); // scrolling down
+      else setShow(true); // scrolling up
+      lastY = currentY;
+
+      // auto-close mobile menu on scroll
+      if (isOpen) setIsOpen(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isOpen]);
 
   const navLinks = [
     { href: "#home", text: "Home" },
@@ -25,7 +44,11 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50`}>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
+        show ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="mt-2 md:w-fit mx-6 md:mx-auto px-6 py-3 border dark:border-b-white rounded-full dark:shadow-lg dark:shadow-gray-900 shadow-xl backdrop-blur-md">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -39,14 +62,10 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               className="h-9 w-9 mt-1 rounded-full"
               src="/logo.png"
               variants={{
+                rest: { rotate: 0 },
                 hover: {
                   rotate: 360,
-                  transition: {
-                    repeat: Infinity,
-                    duration: 1,
-                    ease: "linear",
-                  },
-                  rest: { rotate: 0 },
+                  transition: { repeat: Infinity, duration: 1, ease: "linear" },
                 },
               }}
             />
@@ -79,7 +98,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             }`}
           >
             <span
-              className={`p-1 bg-white rounded-full transition-transform duration-400 ${
+              className={`p-1 bg-white rounded-full transition-transform duration-300 ${
                 darkMode
                   ? "translate-x-6 text-yellow-600"
                   : "translate-x-0 text-blue-700"
