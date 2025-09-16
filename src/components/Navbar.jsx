@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { animate, motion } from "framer-motion";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import { LuSun, LuMoon } from "react-icons/lu";
 
 // Navigation Links Component
@@ -16,16 +16,6 @@ const NavLink = ({ href, children }) => (
 // Main Navbar Component
 const Navbar = ({ darkMode, setDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  // Effect to handle scroll detection
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const navLinks = [
     { href: "#home", text: "Home" },
@@ -35,14 +25,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   ];
 
   return (
-    <nav
-      className={`lg:px-24 fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b dark:border-b-white shadow-xl dark:shadow-lg dark:shadow-gray-900 ${
-        isScrolled
-          ? "dark:bg-gray-900/80 backdrop-blur-sm shadow-2xl"
-          : "bg-gray-100 dark:bg-gray-950"
-      }`}
-    >
-      <div className="container mx-auto px-6 py-4">
+    <nav className={`fixed top-0 left-0 right-0 z-50`}>
+      <div className="mt-2 md:w-fit mx-6 md:mx-auto px-6 py-3 border dark:border-b-white rounded-full dark:shadow-lg dark:shadow-gray-900 shadow-xl backdrop-blur-md">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <motion.a
@@ -52,8 +36,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             rotate="rest"
           >
             <motion.img
-              className="h-10 w-10 rounded-full"
-              src="/logo.jpeg"
+              className="h-9 w-9 mt-1 rounded-full"
+              src="/logo.png"
               variants={{
                 hover: {
                   rotate: 360,
@@ -66,7 +50,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 },
               }}
             />
-            Piyush
+            PIYUSH
           </motion.a>
 
           {/* Desktop Navigation */}
@@ -90,7 +74,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             onClick={() => {
               setDarkMode(!darkMode);
             }}
-            className={`hidden md:flex w-14 px-1 py-1 rounded-full cursor-pointer shadow shadow-black dark:shadow-white transition-colors duration-300 ease-in-out ${
+            className={`hidden md:flex md:ml-20 w-14 px-1 py-1 rounded-full cursor-pointer shadow shadow-black dark:shadow-white transition-colors duration-300 ease-in-out ${
               darkMode ? "bg-indigo-600" : "bg-sky-300"
             }`}
           >
@@ -138,7 +122,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           isOpen ? "max-h-screen" : "max-h-0"
         }`}
       >
-        <div className="backdrop-blur-sm px-6 py-2 pb-4 flex flex-col items-center space-y-4">
+        <div className="backdrop-blur-md py-2 pb-4 flex flex-col items-center space-y-4 border-b dark:border-b-white">
           {navLinks.map((link) => (
             <a
               key={link.href}

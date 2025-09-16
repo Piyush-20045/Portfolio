@@ -23,7 +23,7 @@ function App() {
         darkMode ? "dark" : ""
       } bg-gray-50 dark:bg-gray-950 transition-all duration-300`}
     >
-      // Dot Background
+      {/* Dot Background */}
       <DotBackground
         dotSize={1}
         dotColor="#d4d4d4"
