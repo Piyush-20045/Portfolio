@@ -1,12 +1,98 @@
-# React + Vite
+# 🗂️ Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal portfolio website built with React, Vite, Tailwind CSS, and Framer Motion.
+It showcases my projects, skills, and contact information.
 
-Currently, two official plugins are available:
+### 👉 **Live Demo:** [Portfolio](https://piyushyadav.vercel.app/)  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📸 Preview  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![BlogNest Preview](https://res.cloudinary.com/dhhhr2skx/image/upload/v1758177918/portfolio_squ4ot.png)
+
+---
+
+## ✨ Features  
+
+- 🖼️ Hero Section – Clean introduction with animation
+- 💼 Projects Showcase – Highlighting my best work
+- 🎨 Modern UI/UX – Styled with Tailwind CSS, Framer Motion animations and lightswind ui
+- 📱 Responsive Design – Optimized for desktop and mobile
+- ✉️ Contact Form – Integrated with EmailJS for direct messages
+---
+
+## ⚙️ Tech Stack  
+
+- React.js (Frontend)
+- Tailwind CSS (Styling)
+- Framer Motion (Animations)
+- React Icons (Icons)
+- EmailJS (Contact form integration)
+- React-Toastify (Notifications)
+---
+
+## 📦 Setup Instructions  
+
+### Prerequisites  
+- Node.js & npm installed
+- Emailjs account for contact form
+
+#### 1. Clone the repo
+```
+git clone https://github.com/Piyush-20045/Portfolio.git
+cd portfolio
+```
+
+#### 2. Install dependencies
+```
+npm install
+```
+
+#### 3. Create a .env file
+```
+VITE_EMAILJS_PUBLIC_KEY=your_emailjs_public_key
+```
+
+#### 4. Run the app
+```
+npm run dev
+```
+
+---
+
+## 📁 Folder Structure
+```
+portfolio/
+├── public/
+├── src/
+    ├── assets/
+    ├── components/
+    ├── data/
+    └── ui/
+    │   ├── hooks/
+    │   ├── lib/
+    │   ├── lightswind.css
+    │   └── lightswind/
+    ├── App.jsx
+    ├── index.css
+    ├── main.jsx
+├── .gitignore
+├── README.md
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+---
+
+## 📚 What I Learned
+- Designed a responsive and modern portfolio with Tailwind CSS
+- Used Framer Motion for smooth animations
+- Integrated EmailJS for real-time form submissions
+- Used the lightswind ui library for better ui
+---
+## 🧑 Author
+**Piyush Yadav**
+- Twitter/X: [@piyush9436](https://x.com/Piyush9436)
+- LinkedIn: [@piyushyadav](https://www.linkedin.com/in/piyush-yadav-a4b164260/)
