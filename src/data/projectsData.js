@@ -1,6 +1,5 @@
 import blognest from "../assets/projects/blognest.PNG";
 import myJournal from "../assets/projects/myJournal.PNG";
-import portfolio from "../assets/projects/portfolio.PNG";
 import campX from "../assets/projects/CampX.png";
 
 export const projectsData = [
@@ -14,7 +13,7 @@ export const projectsData = [
   },
   {
     title: "CampX",
-    description: "CampX is a full-stack MERN application where users can explore, add, and review campgrounds. It’s built with modern web technologies and demonstrates authentication, CRUD operations, state management with redux toolkit.", 
+    description: "CampX is a full-stack MERN application where users can explore, add, and review campgrounds. It’s built with modern web technologies and demonstrates authentication, CRUD operations, state management with redux toolkit.",
     image: campX,
     tags: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB", "JWT", "Redux Toolkit"],
     liveUrl: "https://campx-py.vercel.app/",
@@ -27,13 +26,5 @@ export const projectsData = [
     tags: ["React", "Firebase", "Tailwind CSS", "Express"],
     liveUrl: "https://my-journal-swart.vercel.app/",
     githubUrl: "https://github.com/Piyush-20045/my-journal",
-  },
-  {
-    title: "Portfolio Website",
-    description: "A personal portfolio website to showcase my skills and projects. Designed to be fast, responsive, and visually appealing, with a focus on user experience.",
-    image: portfolio,
-    tags: ["Vite", "React", "Tailwind CSS", "Framer Motion"],
-    liveUrl: "/",
-    githubUrl: "https://github.com/Piyush-20045/Portfolio",
   },
 ];
