@@ -81,7 +81,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               </NavLink>
             ))}
             <a
-              href="#resume"
+              href="https://drive.google.com/file/d/1G04O0WYgVPlycJ6LfeeG0uEpFID9QiGQ/view?usp=drive_link"
+              target="_blank"
               className="px-3 py-1.5 text-white bg-gray-800 transition-all duration-300 rounded shadow-md hover:bg-gray-700 shadow-black dark:shadow dark:shadow-amber-100 active:shadow-none active:scale-95"
             >
               Resume
@@ -153,7 +154,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             </a>
           ))}
           <a
-            href="#resume"
+            href="https://drive.google.com/file/d/1G04O0WYgVPlycJ6LfeeG0uEpFID9QiGQ/view?usp=drive_link"
+            target="_blank"
             className="mb-9 px-3 py-1.5 text-white bg-gray-800 transition-all duration-300 rounded shadow-md hover:bg-gray-700 shadow-black dark:shadow dark:shadow-amber-100 active:shadow-none active:scale-95"
             onClick={() => setIsOpen(false)}
           >
