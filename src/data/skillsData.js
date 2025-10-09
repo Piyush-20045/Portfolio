@@ -5,39 +5,54 @@ import cssLogo from "../assets/skills/css.png";
 import bootstrapLogo from "../assets/skills/bootstrap.png";
 import tailwindLogo from "../assets/skills/tailwind.png";
 import reactLogo from "../assets/skills/react.png";
+import nextjsLogo from "../assets/skills/nextjs.png";
+import typescriptLogo from "../assets/skills/typescript.png";
 import framerLogo from "../assets/skills/motion.png";
 import routerLogo from "../assets/skills/router.png";
 import nodeLogo from "../assets/skills/node.png";
 import expressLogo from "../assets/skills/express.png";
 import mongoLogo from "../assets/skills/mongodb.png";
+import postgresLogo from "../assets/skills/postgres.png";
 import firebaseLogo from "../assets/skills/firebase.png";
 import gitLogo from "../assets/skills/git.png";
 import githubLogo from "../assets/skills/github.png";
 import vsCodeLogo from "../assets/skills/vs.png";
 import postmanLogo from "../assets/skills/postman.png";
+import prisma from "../assets/skills/prisma.png";
+import mongoose from "../assets/skills/mongoose.png";
+import shadcn from "../assets/skills/shadcn.png";
 
 // Skill Categories
+export const Languages = [
+  { name: "JavaScript", icon: jsLogo },
+  { name: "Typescript", icon: typescriptLogo },
+];
+
 export const frontendSkills = [
   { name: "HTML", icon: htmlLogo },
   { name: "CSS", icon: cssLogo },
-  { name: "JavaScript", icon: jsLogo },
+  { name: "React", icon: reactLogo },
+  { name: "NextJs", icon: nextjsLogo },
   { name: "Tailwind CSS", icon: tailwindLogo },
   { name: "Bootstrap", icon: bootstrapLogo },
-  { name: "React", icon: reactLogo },
-  { name: "React Router", icon: routerLogo },
   { name: "Framer Motion", icon: framerLogo },
+  { name: "React Router", icon: routerLogo },
 ];
 
 export const backendSkills = [
   { name: "Node.js", icon: nodeLogo },
   { name: "Express.js", icon: expressLogo },
   { name: "MongoDB", icon: mongoLogo },
+  { name: "PostgreSQL", icon: postgresLogo },
+  { name: "Mongoose", icon: mongoose },
+  { name: "Prisma", icon: prisma },
   { name: "Firebase", icon: firebaseLogo },
 ];
 
 export const toolSkills = [
   { name: "Git", icon: gitLogo },
   { name: "GitHub", icon: githubLogo },
-  { name: "VsCode", icon: vsCodeLogo },
   { name: "Postman", icon: postmanLogo },
+  { name: "Shadcn UI", icon: shadcn },
+  { name: "VsCode", icon: vsCodeLogo },
 ];
