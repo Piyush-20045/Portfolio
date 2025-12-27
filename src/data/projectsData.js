@@ -1,8 +1,24 @@
 import blognest from "../assets/projects/blognest.PNG";
 import myJournal from "../assets/projects/myJournal.PNG";
 import campX from "../assets/projects/CampX.png";
+import logofy from "../assets/projects/logofy.png"
 
 export const projectsData = [
+  {
+    title: "Logofy",
+    description: "Logofy is an AI-powered logo generator where users can create custom logos using text prompts. It supports authentication, free credits, premium plans with payments, and saves generated logos for users.",
+    image: logofy,
+    tags: ["Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "Clerk",
+      "AI APIs",
+      "Razorpay"],
+    liveUrl: "https://blognest-nu.vercel.app/",
+    status: "In Progress",
+    githubUrl: "https://github.com/Piyush-20045/logofy",
+  },
   {
     title: "BlogNest",
     description: "BlogNest is a full-stack blog application where users can write, edit, and share their thoughts. Built with the MERN stack, it supports image uploads, bookmarks, comments, and more!",
