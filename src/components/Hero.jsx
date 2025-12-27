@@ -27,7 +27,7 @@ const Hero = () => {
       >
         <img
           className="w-36 md:w-52 bg-gray-500 rounded-full border-white border-4 transition-all duration-300 hover:scale-105 cursor-pointer"
-          src="/hero.png"
+          src="/hero.JPG"
         />
       </motion.div>
       <motion.div

@@ -60,7 +60,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           >
             <motion.img
               className="h-9 w-9 mt-1 rounded-full"
-              src="/logo.png"
+              src="/favicon.ico"
               variants={{
                 rest: { rotate: 0 },
                 hover: {
