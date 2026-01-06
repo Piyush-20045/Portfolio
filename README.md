@@ -52,6 +52,9 @@ npm install
 #### 3. Create a .env file
 ```
 VITE_EMAILJS_PUBLIC_KEY=your_emailjs_public_key
+VITE_UMAMI_SRC=your-umami-script-url
+VITE_UMAMI_ID=your_umami_website_id
+
 ```
 
 #### 4. Run the app
