@@ -18,19 +18,19 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { href: "#home", text: "Home" },
     { href: "#skills", text: "Skills" },
     { href: "#projects", text: "Projects" },
+    { href: "#contact", text: "Contact" },
   ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 transition-transform duration-300 max-w-4xl mx-auto">
-      <div className="mt-2 mx-3 md:mx-6 px-6 py-2 border dark:border-b-white rounded-md dark:shadow-lg dark:shadow-gray-900 shadow-xl backdrop-blur-md">
+      <div className="mt-2 mx-3 md:mx-6 px-6 py-2 border dark:border-b-white rounded-md dark:shadow-lg dark:shadow-neutral-900 shadow-xl backdrop-blur-md">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <a href="#home">
             <motion.img
-              className="h-11 w-11 bg-blue-300 rounded-md transition-all duration-300 ease-in-out hover:scale-90 dark:bg-yellow-300"
+              className="h-11 w-11 bg-blue-300 rounded-md transition-all duration-300 ease-in-out hover:scale-90 dark:bg-zinc-300"
               src="/hero.png"
               whileHover="hover"
             />
