@@ -4,7 +4,7 @@ import {
   backendSkills,
   toolSkills,
   Languages,
-} from "../data/skillsData";
+} from "../../data/skillsData";
 import { FaCode } from "react-icons/fa";
 import { RiPaintFill } from "react-icons/ri";
 import { CiServer } from "react-icons/ci";
