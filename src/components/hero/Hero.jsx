@@ -1,38 +1,12 @@
-import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { TypingText } from "../ui/lightswind/typing-text";
-import { SiGmail } from "react-icons/si";
+import { TypingText } from "../../ui/lightswind/typing-text";
 import { Tooltip } from "react-tooltip";
-import x from "../assets/socials/x.png";
+
+import { BsSend } from "react-icons/bs";
+import { FiFileText } from "react-icons/fi";
+import { HeroButton, SocialLinks } from "./HeroBtn";
 
 const Hero = ({ darkMode }) => {
-  // ICONS DATA
-  const socialLinks = [
-    {
-      icon: <FaLinkedin />,
-      href: "https://tinyurl.com/yPiyush",
-      label: "Linkedin",
-      hoverColor: "hover:text-blue-700",
-    },
-    {
-      icon: <FaGithub />,
-      href: "https://github.com/Piyush-20045",
-      label: "Github",
-      hoverColor: "hover:text-black dark:hover:text-gray-400",
-    },
-    {
-      icon: <SiGmail />,
-      href: "mailto:piyushyadav20045@gmail.com",
-      label: "Gmail",
-      hoverColor: "hover:text-red-600",
-    },
-    {
-      icon: <img src={x} alt="X" className="w-8 h-8 text-white"/>,
-      href: "https://x.com/Piyush9436",
-      label: "Twitter",
-      hoverColor: "hover:text-sky-500",
-    },
-  ];
   // FRAMER MOTION VARIANTS
   const socialIconVariants = {
     hover: {
@@ -61,7 +35,7 @@ const Hero = ({ darkMode }) => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="md:ml-6 mb-5 md:mb-0 w-fit p-1 rounded-full"
+        className="mt-12 md:ml-6 mb-5 md:mb-0 w-fit p-1 rounded-full"
       >
         <img
           className="w-36 md:w-56 rounded-full transition-all duration-300 ease-in-out bg-blue-300 dark:bg-zinc-300 hover:scale-105 cursor-pointer"
@@ -73,7 +47,7 @@ const Hero = ({ darkMode }) => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-center md:text-start ml-3 mr-2"
+        className="text-start md:text-start ml-3 mr-2"
       >
         {/* TITLE and DESCRIPTION */}
         <h1 className="text-3xl md:text-4xl font-bold text-gray-700 dark:text-white">
@@ -83,10 +57,10 @@ const Hero = ({ darkMode }) => {
             align="center"
             className="text-neutral-500 dark:text-neutral-400"
           >
-            A Full Stack web developer.
+            A Full Stack developer.
           </TypingText>
         </h1>
-        <p className="mt-3 font-semibold dark:font-medium text-lg text-gray-700 dark:text-gray-400 max-w-xl">
+        <p className="mt-3 font-semibold dark:font-medium text-[17px] text-gray-700 dark:text-gray-400 max-w-xl">
           I build scalable and efficient web applications from front to back.
           Passionate about creating seamless user experiences with modern
           technologies like React.js, Next.js, PostgreSQL and everything in
@@ -94,7 +68,7 @@ const Hero = ({ darkMode }) => {
         </p>
 
         {/* Location and Socials */}
-        <div className="mt-8 mx-3 md:mx-0 md:mt-6 flex justify-between text-sm md:text-base">
+        <div className="mt-4 flex justify-between items-center text-sm md:text-base">
           <span className="flex text-gray-800 dark:text-gray-400">
             <img
               className="w-5 h-5 bg-gray-300 dark:bg-gray-400 rounded"
@@ -104,11 +78,11 @@ const Hero = ({ darkMode }) => {
           </span>
 
           {/* Social Links Section */}
-          <div className="flex gap-5 md:gap-6 md:mr-12 text-gray-700 dark:text-gray-400">
-            {socialLinks.map((social) => {
+          <div className="flex gap-2 md:gap-3 md:mr-12 text-gray-700 dark:text-gray-400">
+            {SocialLinks.map((social) => {
               return (
                 <motion.a
-                  key={social.name}
+                  key={social.label}
                   variants={socialIconVariants}
                   whileHover="hover"
                   whileTap="tap"
@@ -127,6 +101,24 @@ const Hero = ({ darkMode }) => {
           <Tooltip
             id="social-tooltip"
             className="!px-2.5 !py-1 !text-sm !rounded-lg !dark:bg-white !dark:text-black"
+          />
+        </div>
+
+        {/* RESUME and GET-IN-TOUCH BUTTONS */}
+        <div className="mt-4 md:ml-0 flex gap-4">
+          <HeroButton
+            link={
+              "https://drive.google.com/file/d/1gC2wTk0MHAVnK8YRHs_2ANIoEi_2PmPo/view?usp=drive_link"
+            }
+            target={"_blank"}
+            icon={<FiFileText />}
+            title={"Resume"}
+          />
+          <HeroButton
+            link={"/#contact"}
+            target={""}
+            icon={<BsSend />}
+            title={"Get in touch"}
           />
         </div>
       </motion.div>

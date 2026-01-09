@@ -92,7 +92,7 @@ export const TypingText = ({
         {characters.map((char, index) => (
           <motion.span
             key={`${char}-${index}`}
-            className="inline-block"
+            className=""
             variants={characterVariants}
             custom={index}
             initial="hidden"

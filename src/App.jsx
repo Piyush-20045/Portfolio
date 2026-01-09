@@ -1,6 +1,6 @@
 import Contact from "./components/Contact";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
+import Hero from "./components/hero/Hero.jsx";
+import Navbar from "./components/navbar/Navbar.jsx";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import { useState, useEffect } from "react";
@@ -34,7 +34,7 @@ function App() {
         className="h-full"
       >
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-        <Hero />
+        <Hero darkMode={darkMode} />
         <Skills />
         <Projects />
         <Contact />
