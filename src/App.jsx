@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import { DotBackground } from "./ui/lightswind/grid-dot-backgrounds.tsx";
 import { Tooltip } from "react-tooltip";
+import Footer from "./components/common/footer.jsx";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -40,6 +41,7 @@ function App() {
           <Skills />
           <Projects />
           <Contact />
+          <Footer />
         </div>
 
         {/* REACT TOASTIFY */}
