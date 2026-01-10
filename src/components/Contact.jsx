@@ -171,7 +171,6 @@ const Contact = () => {
             </motion.a>
           ))}
         </div>
-        <Tooltip id="social-tooltip" />
       </motion.form>
       {/* FOOTER */}
       <footer className="text-center mt-16 mx-9 text-sm md:text-base font-semibold text-gray-700 dark:text-gray-400">

@@ -6,6 +6,7 @@ import Skills from "./components/skills/Skills.jsx";
 import { useState, useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import { DotBackground } from "./ui/lightswind/grid-dot-backgrounds.tsx";
+import { Tooltip } from "react-tooltip";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -35,7 +36,7 @@ function App() {
       >
         <div className="mx-2 max-w-[850px] bg-white dark:bg-black">
           <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-          <Hero darkMode={darkMode} />
+          <Hero />
           <Skills />
           <Projects />
           <Contact />
@@ -43,6 +44,11 @@ function App() {
 
         {/* REACT TOASTIFY */}
         <ToastContainer position="top-right" autoClose={3000} />
+        {/* REACT TOOLTIP */}
+        <Tooltip
+          id="social-tooltip"
+          className="!px-2.5 !py-1 !text-sm !rounded-lg !dark:bg-white !dark:text-black"
+        />
       </DotBackground>
     </div>
   );

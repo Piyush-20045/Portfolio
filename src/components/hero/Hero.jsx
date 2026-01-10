@@ -6,7 +6,7 @@ import { BsSend } from "react-icons/bs";
 import { FiFileText } from "react-icons/fi";
 import { HeroButton, SocialLinks } from "./HeroBtn";
 
-const Hero = ({ darkMode }) => {
+const Hero = () => {
   // FRAMER MOTION VARIANTS
   const socialIconVariants = {
     hover: {
@@ -15,13 +15,6 @@ const Hero = ({ darkMode }) => {
       transition: { type: "spring", stiffness: 300 },
     },
     tap: { scale: 1 },
-  };
-  // Add a custom style for the tooltip in dark mode
-  const tooltipStyles = {
-    dark: {
-      backgroundColor: "white",
-      color: "black",
-    },
   };
 
   return (
@@ -98,10 +91,6 @@ const Hero = ({ darkMode }) => {
               );
             })}
           </div>
-          <Tooltip
-            id="social-tooltip"
-            className="!px-2.5 !py-1 !text-sm !rounded-lg !dark:bg-white !dark:text-black"
-          />
         </div>
 
         {/* RESUME and GET-IN-TOUCH BUTTONS */}
