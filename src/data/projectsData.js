@@ -29,7 +29,7 @@ export const projectsData = [
   },
   {
     title: "CampX",
-    description: "CampX is a full-stack MERN application where users can explore, add, and review campgrounds. It’s built with modern web technologies and demonstrates authentication, CRUD operations, state management with redux toolkit.",
+    description: "CampX is a full-stack MERN application where users can explore, add, and review campgrounds. Built with modern web technologies featuring auth, CRUD operations, state management with redux toolkit.",
     image: campX,
     tags: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB", "JWT", "Redux Toolkit"],
     liveUrl: "https://campx-py.vercel.app/",
