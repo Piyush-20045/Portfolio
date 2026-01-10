@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
+import Input from "./Input";
+import { BsSend } from "react-icons/bs";
 
 const Form = () => {
   const form = useRef();
@@ -21,48 +23,41 @@ const Form = () => {
   };
 
   return (
-    <form ref={form} onSubmit={sendMail}>
-      <div className="flex flex-col ">
-        <label className="mb-2 font-semibold text-gray-700 dark:text-gray-100">
+    <form ref={form} onSubmit={sendMail} className="flex flex-col gap-5">
+      <div className="flex flex-col">
+        <label className="mb-1.5 font-medium text-gray-700 dark:text-gray-100">
           Name
         </label>
-        <input
-          type="text"
-          name="user_name"
-          placeholder="Your Name"
-          className="block w-full p-3 bg-gray-50 dark:bg-gray-200 border border-gray-300 rounded-lg focus:outline-blue-600"
-          required
-        />
+        <Input type="text" name="user_name" placeholder="Your full name" />
       </div>
       <div className="flex flex-col">
-        <label className="mb-2 font-semibold text-gray-700 dark:text-gray-100">
+        <label className="mb-1.5 font-medium text-gray-700 dark:text-gray-100">
           Email
         </label>
-        <input
+        <Input
           type="email"
           name="user_email"
-          placeholder="Your Email"
-          className="block w-full p-3 bg-gray-50 dark:bg-gray-200 border border-gray-300 rounded-lg  focus:outline-blue-600"
-          required
+          placeholder="your-email@gmail.com"
         />
       </div>
       <div className="flex flex-col">
-        <label className="mb-2 font-semibold text-gray-700 dark:text-gray-100">
+        <label className="mb-1.5 font-medium text-gray-700 dark:text-gray-100">
           Message
         </label>
         <textarea
           name="message"
           rows="4"
           placeholder="Your message here..."
-          className="block w-full p-3 bg-gray-50 dark:bg-gray-200 border border-gray-300 rounded-lg resize-none focus:outline-blue-600"
+          className="block w-full p-3 rounded-lg bg-white dark:bg-neutral-950 border border-gray-300 dark:border-neutral-700 text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-neutral-400 dark:focus:ring-neutral-700 resize-none"
           required
         ></textarea>
       </div>
       {/* Submit Button */}
       <button
         type="submit"
-        className="w-full mt-5 px-6 py-4 text-lg font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-all duration-200 active:scale-95 cursor-pointer"
+        className="w-full mt-3 px-6 py-2 flex justify-center items-center gap-3 text-md font-semibold text-white dark:text-gray-950 bg-black dark:bg-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-all duration-200 active:scale-95 cursor-pointer"
       >
+        <BsSend />
         Send Message
       </button>
     </form>
