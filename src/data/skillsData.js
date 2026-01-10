@@ -1,4 +1,4 @@
-// Logos
+// LOGOS
 import jsLogo from "../assets/skills/js.png";
 import htmlLogo from "../assets/skills/html.png";
 import cssLogo from "../assets/skills/css.png";
@@ -22,13 +22,13 @@ import prisma from "../assets/skills/prisma.png";
 import mongoose from "../assets/skills/mongoose.png";
 import shadcn from "../assets/skills/shadcn.png";
 
-// Skill Categories
-export const Languages = [
+// SKILLS DATA
+export const skills = [
+  // Languages
   { name: "JavaScript", icon: jsLogo },
   { name: "Typescript", icon: typescriptLogo },
-];
 
-export const frontendSkills = [
+  // Frontend
   { name: "HTML", icon: htmlLogo },
   { name: "CSS", icon: cssLogo },
   { name: "React", icon: reactLogo },
@@ -37,9 +37,8 @@ export const frontendSkills = [
   { name: "Bootstrap", icon: bootstrapLogo },
   { name: "Framer Motion", icon: framerLogo },
   { name: "React Router", icon: routerLogo },
-];
 
-export const backendSkills = [
+  // Backend
   { name: "Node.js", icon: nodeLogo },
   { name: "Express.js", icon: expressLogo },
   { name: "MongoDB", icon: mongoLogo },
@@ -47,9 +46,8 @@ export const backendSkills = [
   { name: "Mongoose", icon: mongoose },
   { name: "Prisma", icon: prisma },
   { name: "Firebase", icon: firebaseLogo },
-];
 
-export const toolSkills = [
+  // Tools
   { name: "Git", icon: gitLogo },
   { name: "GitHub", icon: githubLogo },
   { name: "Postman", icon: postmanLogo },
