@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { TypingText } from "../../ui/lightswind/typing-text";
-import { Tooltip } from "react-tooltip";
-
 import { BsSend } from "react-icons/bs";
 import { FiFileText } from "react-icons/fi";
-import { HeroButton, SocialLinks } from "./HeroBtn";
+
+import { HeroButton } from "./HeroBtn";
+import { SocialLinks } from "../../data/socialLinks";
 
 const Hero = () => {
   // FRAMER MOTION VARIANTS

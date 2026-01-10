@@ -1,35 +1,6 @@
 import { motion } from "framer-motion";
-import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
 import Form from "./Form";
-
-// ICONS from react-icons
-const socialLinks = [
-  {
-    icon: <SiGmail />,
-    href: "mailto:piyushyadav20045@gmail.com",
-    label: "Gmail",
-    hoverColor: "hover:text-red-600",
-  },
-  {
-    icon: <FaLinkedin />,
-    href: "https://tinyurl.com/yPiyush",
-    label: "Linkedin",
-    hoverColor: "hover:text-blue-700",
-  },
-  {
-    icon: <FaGithub />,
-    href: "https://github.com/Piyush-20045",
-    label: "Github",
-    hoverColor: "hover:text-black dark:hover:text-gray-400",
-  },
-  {
-    icon: <FaTwitterSquare />,
-    href: "https://x.com/Piyush9436",
-    label: "Twitter",
-    hoverColor: "hover:text-sky-500",
-  },
-];
+import { SocialLinks } from "../../data/socialLinks";
 
 const Contact = () => {
   // FRAMER MOTION VARIANTS
@@ -92,8 +63,8 @@ const Contact = () => {
         </div>
 
         {/* Social Links Section */}
-        <div className="flex justify-center gap-7">
-          {socialLinks.map((social, index) => (
+        <div className="flex justify-center gap-4 md:gap-5">
+          {SocialLinks.map((social, index) => (
             <motion.a
               variants={socialIconVariants}
               key={index}
