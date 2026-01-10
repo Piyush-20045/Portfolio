@@ -1,7 +1,7 @@
 import Contact from "./components/Contact";
 import Hero from "./components/hero/Hero.jsx";
 import Navbar from "./components/navbar/Navbar.jsx";
-import Projects from "./components/Projects";
+import Projects from "./components/projects/Projects.jsx";
 import Skills from "./components/skills/Skills.jsx";
 import { useState, useEffect } from "react";
 import { ToastContainer } from "react-toastify";
