@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Lens } from "../../ui/lightswind/lens";
 import { TbLoader2 } from "react-icons/tb";
+import { BiGlobe } from "react-icons/bi";
+import { BsGithub } from "react-icons/bs";
 
 const ProjectCard = ({ project, index }) => {
   return (
@@ -24,7 +26,7 @@ const ProjectCard = ({ project, index }) => {
         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
           {project.title}
         </h3>
-        <p className="text-gray-700 dark:text-gray-300 font-medium">
+        <p className="min-h-32 text-gray-700 dark:text-gray-300 font-medium">
           {project.description}
         </p>
         <div className="h-14 mt-3 flex flex-wrap gap-2 text-xs">
@@ -37,7 +39,7 @@ const ProjectCard = ({ project, index }) => {
             </span>
           ))}
         </div>
-        <div className="mt-6 h-12 flex justify-between">
+        <div className="mt-6 h-10 flex justify-between">
           {project.status === "In Progress" ? (
             <div className="px-3 py-2 flex items-center gap-2 text-sm font-medium text-green-600 bg-teal-100 rounded-md">
               <TbLoader2 className="w-4 h-4 animate-spin" />
@@ -46,21 +48,20 @@ const ProjectCard = ({ project, index }) => {
           ) : (
             <a
               href={project.liveUrl}
-              className="px-2 flex items-center gap-1 font-medium bg-gradient-to-r from-indigo-500 to-purple-500 text-sm text-white rounded cursor-pointer transition-all hover:underline shadow-purple-100 hover:shadow-sm active:scale-95 select-none"
+              className="px-2 flex justify-center items-center gap-2 text-sm font-base text-neutral-700 dark:text-neutral-300 rounded hover:bg-gray-100 dark:hover:bg-neutral-900 shadow shadow-black dark:shadow-white transition-all duration-300 active:shadow-none active:scale-95"
               target="_blank"
-              rel="noopener noreferrer"
             >
-              <img src="/link.svg" />
-              Live Demo
+              <BiGlobe size={20} />
+              Live Website
             </a>
           )}
           <a
             href={project.githubUrl}
-            className="px-2 py-2 flex items-center gap-1 font-bold bg-gray-100 hover:bg-gray-200 text-sm text-gray-900 rounded cursor-pointer transition-all border-gray-500 border-r-2 border-b-4 hover:underline shadow-amber-100 hover:shadow-sm active:scale-95 select-none"
+            className="px-2 flex justify-center items-center gap-2 text-sm font-base text-neutral-700 dark:text-neutral-300 rounded hover:bg-gray-100 dark:hover:bg-neutral-900 shadow shadow-black dark:shadow-white transition-all duration-300 active:shadow-none active:scale-95"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/github.svg" />
+            <BsGithub size={20} />
             Source Code
           </a>
         </div>
