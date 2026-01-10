@@ -1,4 +1,4 @@
-import Contact from "./components/Contact";
+import Contact from "./components/contact/Contact.jsx";
 import Hero from "./components/hero/Hero.jsx";
 import Navbar from "./components/navbar/Navbar.jsx";
 import Projects from "./components/projects/Projects.jsx";
