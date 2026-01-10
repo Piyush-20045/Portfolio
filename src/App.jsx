@@ -2,7 +2,7 @@ import Contact from "./components/Contact";
 import Hero from "./components/hero/Hero.jsx";
 import Navbar from "./components/navbar/Navbar.jsx";
 import Projects from "./components/Projects";
-import Skills from "./components/Skills";
+import Skills from "./components/skills/Skills.jsx";
 import { useState, useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import { DotBackground } from "./ui/lightswind/grid-dot-backgrounds.tsx";
@@ -33,11 +33,13 @@ function App() {
         fadeIntensity={80}
         className="h-full"
       >
-        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-        <Hero darkMode={darkMode} />
-        <Skills />
-        <Projects />
-        <Contact />
+        <div className="mx-2 max-w-[850px] bg-white dark:bg-black">
+          <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+          <Hero darkMode={darkMode} />
+          <Skills />
+          <Projects />
+          <Contact />
+        </div>
 
         {/* REACT TOASTIFY */}
         <ToastContainer position="top-right" autoClose={3000} />
