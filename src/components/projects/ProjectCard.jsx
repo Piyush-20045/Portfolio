@@ -8,12 +8,12 @@ const ProjectCard = ({ project, index }) => {
   return (
     <motion.div
       key={index}
-      className="bg-gray-100 dark:bg-gray-900 rounded-xl shadow-black dark:shadow-amber-100 overflow-hidden hover:shadow-sm transition-shadow duration-300 shadow-md"
+      className="bg-gray-100 dark:bg-neutral-900 rounded-xl shadow-none overflow-hidden hover:shadow-md transition-shadow duration-300 border-2 border-gray-200 dark:border-gray-950"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ delay: index * 0.1, duration: 1, type: "spring" }}
-      whileHover={{ scale: 1.02 }}
+      transition={{ delay: index * 0.1, duration: 0.5, type: "spring" }}
+      whileHover={{ scale: 1.01 }}
     >
       <Lens zoomFactor={2} lensSize={150}>
         <img
@@ -26,7 +26,7 @@ const ProjectCard = ({ project, index }) => {
         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
           {project.title}
         </h3>
-        <p className="min-h-32 text-gray-700 dark:text-gray-300 font-medium">
+        <p className="min-h-36 text-gray-700 dark:text-gray-300 font-medium">
           {project.description}
         </p>
         <div className="h-14 mt-3 flex flex-wrap gap-2 text-xs">
@@ -48,7 +48,7 @@ const ProjectCard = ({ project, index }) => {
           ) : (
             <a
               href={project.liveUrl}
-              className="px-2 flex justify-center items-center gap-2 text-sm font-base text-neutral-700 dark:text-neutral-300 rounded hover:bg-gray-100 dark:hover:bg-neutral-900 shadow shadow-black dark:shadow-white transition-all duration-300 active:shadow-none active:scale-95"
+              className="px-2 flex justify-center items-center gap-2 text-sm font-base text-neutral-700 dark:text-neutral-300 rounded-md hover:bg-gray-100 dark:hover:bg-neutral-900 shadow shadow-black dark:shadow-white transition-all duration-300 active:shadow-none active:scale-95"
               target="_blank"
             >
               <BiGlobe size={20} />
@@ -57,7 +57,7 @@ const ProjectCard = ({ project, index }) => {
           )}
           <a
             href={project.githubUrl}
-            className="px-2 flex justify-center items-center gap-2 text-sm font-base text-neutral-700 dark:text-neutral-300 rounded hover:bg-gray-100 dark:hover:bg-neutral-900 shadow shadow-black dark:shadow-white transition-all duration-300 active:shadow-none active:scale-95"
+            className="px-2 flex justify-center items-center gap-2 text-sm font-base text-neutral-700 dark:text-neutral-300 rounded-md hover:bg-gray-100 dark:hover:bg-neutral-900 shadow shadow-black dark:shadow-white transition-all duration-300 active:shadow-none active:scale-95"
             target="_blank"
             rel="noopener noreferrer"
           >
