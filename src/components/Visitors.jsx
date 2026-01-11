@@ -1,27 +1,26 @@
 import { useEffect, useState } from "react";
 
 function Visitors() {
-  const [visits, setVisits] = useState(null);
+  const [isBlocked, setIsBlocked] = useState(false);
 
   useEffect(() => {
-    const fetchVisits = async () => {
-      try {
-        const res = await fetch("/api/visits");
-        if (!res.ok) return;
-        const data = await res.json();
-        setVisits(data.total);
-      } catch (err) {
-        console.error("Error in fetching visits", err);
-      }
-    };
-
-    fetchVisits();
+    // Check if the image can load (detect ad blocker)
+    const img = new Image();
+    img.onerror = () => setIsBlocked(true);
+    img.src = "https://piyushh.goatcounter.com/counter.svg";
   }, []);
-  console.log(visits);
+
+  // Don't show if blocked by ad blocker
+  if (isBlocked) return null;
 
   return (
     <div className="px-2 py-1 mb-2 text-sm text-neutral-500 dark:text-neutral-400 border rounded-lg bg-neutral-50 dark:bg-neutral-900">
-      👀 Total Visits: <b>{visits ?? "⚠️"}</b>
+      👀 Total Visits:
+      <img
+        src="https://piyushh.goatcounter.com/counter.svg"
+        alt="visit counter"
+        className="inline ml-1 h-4"
+      />
     </div>
   );
 }
