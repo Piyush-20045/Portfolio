@@ -1,26 +1,49 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 function Visitors() {
-  const [isBlocked, setIsBlocked] = useState(false);
+  const [visits, setVisits] = useState(null);
+  const hasRecorded = useRef(false);
 
   useEffect(() => {
-    // Check if the image can load (detect ad blocker)
-    const img = new Image();
-    img.onerror = () => setIsBlocked(true);
-    img.src = "https://piyushh.goatcounter.com/counter.svg";
+    const recordVisit = async () => {
+      // Prevent double execution in React StrictMode
+      if (hasRecorded.current) return;
+      hasRecorded.current = true;
+
+      try {
+        // Increment the counter on each visit
+        const response = await fetch("/api/visits", {
+          method: "POST",
+        });
+
+        if (!response.ok) {
+          throw new Error("Failed to record visit");
+        }
+
+        const data = await response.json();
+        setVisits(data.total);
+      } catch (error) {
+        console.error("Error recording visit:", error);
+
+        // Fallback: just get the count without incrementing
+        try {
+          const response = await fetch("/api/visits");
+          const data = await response.json();
+          setVisits(data.total);
+        } catch (fallbackError) {
+          console.error("Fallback failed:", fallbackError);
+        }
+      }
+    };
+
+    recordVisit();
   }, []);
 
-  // Don't show if blocked by ad blocker
-  if (isBlocked) return null;
+  if (visits === null) return null;
 
   return (
     <div className="px-2 py-1 mb-2 text-sm text-neutral-500 dark:text-neutral-400 border rounded-lg bg-neutral-50 dark:bg-neutral-900">
-      👀 Total Visits:
-      <img
-        src="https://piyushh.goatcounter.com/counter.svg"
-        alt="visit counter"
-        className="inline ml-1 h-4"
-      />
+      👀 Total Visits: <b>{visits.toLocaleString()}</b>
     </div>
   );
 }
