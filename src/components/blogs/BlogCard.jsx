@@ -9,7 +9,7 @@ const BlogCard = ({ blog, key }) => {
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ delay: key * 0.1, duration: 0.5, type: "spring" }}
+      transition={{ delay: key * 0.1, duration: 1, type: "spring" }}
     >
       {/* Badge */}
       {blog.isFeatured && (

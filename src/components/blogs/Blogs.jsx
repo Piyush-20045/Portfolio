@@ -7,7 +7,7 @@ const Blogs = () => {
     <section className="w-full px-4 py-16 md:px-8 scroll-mt-8">
       {/* TITLE and DESC */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}

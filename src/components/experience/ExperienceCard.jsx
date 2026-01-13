@@ -6,7 +6,13 @@ const ExperienceCard = ({ item }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative">
+    <motion.div
+      className="relative"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.1, duration: 1, type: "spring" }}
+      viewport={{ once: true }}
+    >
       <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-start group">
         {/* Left Side: Date & Logo (Desktop) */}
         <div className="hidden md:flex flex-col items-end w-48 flex-shrink-0 pt-1 text-right">
@@ -126,7 +132,7 @@ const ExperienceCard = ({ item }) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
