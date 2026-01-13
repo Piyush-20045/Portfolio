@@ -9,6 +9,7 @@ import { DotBackground } from "./ui/lightswind/grid-dot-backgrounds.tsx";
 import { Tooltip } from "react-tooltip";
 import Footer from "./components/common/Footer.jsx";
 import Blogs from "./components/blogs/Blogs.jsx";
+import Experience from "./components/experience/Experience.jsx";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -39,6 +40,7 @@ function App() {
         <div className="mx-2 max-w-[850px] bg-white dark:bg-black">
           <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
           <Hero />
+          <Experience />
           <Projects />
           <Skills />
           <Blogs />
