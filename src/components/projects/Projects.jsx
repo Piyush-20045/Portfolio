@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
   return (
-    <section id="projects" className="px-4 md:px-8 py-28 md:py-20 scroll-mt-8">
+    <section id="projects" className="px-4 md:px-8 py-20 scroll-mt-8">
       <motion.div
         className="text-start mx-auto mb-10"
         initial={{ opacity: 0, y: 20 }}

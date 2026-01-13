@@ -4,7 +4,7 @@ import { BlogsData } from "../../data/blogsData";
 
 const Blogs = () => {
   return (
-    <section className="w-full px-4 py-20 md:px-8 scroll-mt-8">
+    <section className="w-full px-4 py-16 md:px-8 scroll-mt-8">
       {/* TITLE and DESC */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

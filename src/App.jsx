@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import { DotBackground } from "./ui/lightswind/grid-dot-backgrounds.tsx";
 import { Tooltip } from "react-tooltip";
-import Footer from "./components/common/Footer.jsx";
+import Footer from "./components/Footer.jsx";
 import Blogs from "./components/blogs/Blogs.jsx";
 import Experience from "./components/experience/Experience.jsx";
 

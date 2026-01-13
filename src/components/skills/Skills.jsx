@@ -7,7 +7,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="w-full pt-20 px-4 md:py-32 md:px-8 scroll-mt-8"
+      className="w-full py-16 px-4 md:px-8 scroll-mt-8 border-y border-slate-200 dark:border-neutral-800"
     >
       <div className="container mx-auto text-start">
         <motion.h2
@@ -17,7 +17,7 @@ const Skills = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          Tech Stack I work with
+          Skills
         </motion.h2>
 
         <motion.p
