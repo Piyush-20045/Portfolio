@@ -8,6 +8,7 @@ import { ToastContainer } from "react-toastify";
 import { DotBackground } from "./ui/lightswind/grid-dot-backgrounds.tsx";
 import { Tooltip } from "react-tooltip";
 import Footer from "./components/common/Footer.jsx";
+import Blogs from "./components/blogs/Blogs.jsx";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -40,6 +41,7 @@ function App() {
           <Hero />
           <Skills />
           <Projects />
+          <Blogs />
           <Contact />
           <Footer />
         </div>
