@@ -13,7 +13,7 @@ const Projects = () => {
         viewport={{ once: true }}
       >
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3">
-          My Creative Work
+          My Projects
         </h2>
         <p className="text-lg text-gray-800 dark:text-gray-300 font-semibold max-w-2xl">
           Here are some of the projects I'm proud of. Each one was a unique

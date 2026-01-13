@@ -39,8 +39,8 @@ function App() {
         <div className="mx-2 max-w-[850px] bg-white dark:bg-black">
           <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
           <Hero />
-          <Skills />
           <Projects />
+          <Skills />
           <Blogs />
           <Contact />
           <Footer />
