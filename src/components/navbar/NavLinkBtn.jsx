@@ -11,8 +11,8 @@ export const NavLink = ({ href, children }) => (
 
 // Navlinks DATA
 export const navLinksData = [
-  { href: "#home", text: "Home" },
-  { href: "#skills", text: "Skills" },
+  { href: "#experience", text: "Experience" },
   { href: "#projects", text: "Projects" },
+  { href: "#skills", text: "Skills" },
   { href: "#contact", text: "Contact" },
 ];
