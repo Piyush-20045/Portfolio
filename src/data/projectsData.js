@@ -15,8 +15,7 @@ export const projectsData = [
       "Clerk",
       "AI APIs",
       "Razorpay"],
-    liveUrl: "https://blognest-nu.vercel.app/",
-    status: "In Progress",
+    liveUrl: "https://logofyy.vercel.app/",
     githubUrl: "https://github.com/Piyush-20045/logofy",
   },
   {
