@@ -10,6 +10,7 @@ import { Tooltip } from "react-tooltip";
 import Footer from "./components/Footer.jsx";
 import Blogs from "./components/blogs/Blogs.jsx";
 import Experience from "./components/experience/Experience.jsx";
+import NotFound from "./NotFound.jsx";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -20,6 +21,21 @@ function App() {
   useEffect(() => {
     localStorage.setItem("darkMode", darkMode);
   }, [darkMode]);
+
+  // 404 NOT FOUND PAGE
+  const path = window.location.pathname;
+  const VALID_PATHS = ["/"];
+  if (!VALID_PATHS.includes(path)) {
+    return (
+      <div
+        className={`${
+          darkMode ? "dark" : ""
+        } bg-gray-50 dark:bg-gray-950 transition-all duration-300`}
+      >
+        <NotFound />;
+      </div>
+    );
+  }
 
   return (
     <div
