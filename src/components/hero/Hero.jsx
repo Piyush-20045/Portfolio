@@ -97,7 +97,7 @@ const Hero = () => {
         <div className="mt-4 md:ml-0 flex gap-4">
           <HeroButton
             link={
-              "https://drive.google.com/file/d/1gC2wTk0MHAVnK8YRHs_2ANIoEi_2PmPo/view?usp=drive_link"
+              "https://drive.google.com/file/d/1TSrr3pzfG4T4y8nwbYpYoEbwq4FerV69/view?usp=drive_link"
             }
             target={"_blank"}
             icon={<FiFileText />}
