@@ -5,6 +5,21 @@ import logofy from "../assets/projects/logofy.png"
 
 export const projectsData = [
   {
+    title: "Linkits",
+    description: "Linkits is a full-stack link-in-bio platform where users can create their own profile and share their links. It supports authentication, free credits, premium plans with payments, and saves generated logos for users.",
+    image: logofy,
+    tags: ["Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "Clerk",
+      "AI APIs",
+      "Razorpay"],
+    liveUrl: "https://logofyy.vercel.app/",
+    githubUrl: "https://github.com/Piyush-20045/logofy",
+    status: "In Progress",
+  },
+  {
     title: "Logofy",
     description: "Logofy is an AI-powered logo generator where users can create custom logos using text prompts. It supports authentication, free credits, premium plans with payments, and saves generated logos for users.",
     image: logofy,
@@ -38,7 +53,7 @@ export const projectsData = [
     title: "MyJournal",
     description: " A full-stack journal app built with React, Tailwind CSS, ExpressJs, and Firebase.. Users can create, edit and delete the journals and also can make them public or private.",
     image: myJournal,
-    tags: ["React", "Firebase", "Tailwind CSS", "Express"],
+    tags: ["React", "Firebase", "Tailwind CSS", "Express", "Node.js"],
     liveUrl: "https://my-journal-swart.vercel.app/",
     githubUrl: "https://github.com/Piyush-20045/my-journal",
   },
