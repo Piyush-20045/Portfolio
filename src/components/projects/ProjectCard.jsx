@@ -1,9 +1,7 @@
 import { motion } from "framer-motion";
 import { Lens } from "../../ui/lightswind/lens";
-import { TbLoader2 } from "react-icons/tb";
-import { BiGlobe, BiLoader } from "react-icons/bi";
-import { BsDot, BsGithub } from "react-icons/bs";
-import { FaEllipsis } from "react-icons/fa6";
+import { BiGlobe } from "react-icons/bi";
+import { BsGithub } from "react-icons/bs";
 import { LuLoaderPinwheel } from "react-icons/lu";
 
 const ProjectCard = ({ project, index }) => {
@@ -27,7 +25,7 @@ const ProjectCard = ({ project, index }) => {
       {/* Content */}
       <div className="h-fit p-5">
         {/* Title */}
-        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 line-clamp-1">
           {project.title}
         </h3>
 
