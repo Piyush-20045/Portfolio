@@ -1,8 +1,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { cn } from "../lib/utils"; // Assuming a utility for classnames
-import { BiX } from "react-icons/bi";
 import { motion, AnimatePresence, HTMLMotionProps } from "framer-motion";
+import { MdOutlineCancel } from "react-icons/md";
 
 // Helper for cn if not provided
 const dummyCn = (...inputs) => {
@@ -178,14 +178,14 @@ const DialogContent = React.forwardRef<
   return ReactDOM.createPortal(
     <AnimatePresence>
       {open && (
-        <div className="fixed inset-0 z-[9999] flex items-start sm:items-center justify-center p-4">
+        <div className="fixed inset-0 z-[999] flex items-start sm:items-center justify-center p-4">
           {/* Backdrop Overlay */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="absolute inset-0 bg-background/80 backdrop-blur-xs"
+            className="absolute inset-0 bg-background/80 backdrop-blur-sm"
             onClick={() => setOpen(false)}
           />
 
@@ -197,14 +197,13 @@ const DialogContent = React.forwardRef<
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
             className={cnFunction(
-              `relative z-[9999] w-full max-w-lg rounded-2xl border 
-                p-6 shadow-lg max-h-[80vh] top-20 lg:top-10 xl:top-4 overflow-y-auto`,
-              // Only add bg-background if className doesn't include a background class
+              `relative z-[999] w-full max-w-lg rounded-2xl border 
+                p-6 shadow-lg max-h-[80vh] overflow-y-auto`,
               className &&
                 typeof className === "string" &&
                 className.includes("bg-")
                 ? null
-                : "bg-background",
+                : "",
               className,
             )}
             role="dialog"
@@ -215,10 +214,10 @@ const DialogContent = React.forwardRef<
             {children}
             <button
               onClick={() => setOpen(false)}
-              className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none text-gray-900 dark:text-white"
+              className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none disabled:pointer-events-none text-gray-900 dark:text-white"
               aria-label="Close dialog"
             >
-              <BiX className="h-4 w-4" />
+              <MdOutlineCancel className="h-8 w-8" />
               <span className="sr-only">Close</span>
             </button>
           </motion.div>
@@ -252,7 +251,7 @@ const DialogTitle = React.forwardRef<
   <h2
     ref={ref}
     className={cnFunction(
-      "text-lg font-semibold leading-none tracking-tight",
+      "text-lg font-semibold leading-none tracking-tight text-start",
       className,
     )}
     {...props}

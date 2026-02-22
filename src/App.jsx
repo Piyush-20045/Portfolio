@@ -22,6 +22,17 @@ function App() {
     localStorage.setItem("darkMode", darkMode);
   }, [darkMode]);
 
+  // Sync dark class to <html> so portaled content (e.g. Dialog) gets dark: styles
+  useEffect(() => {
+    const root = document.documentElement;
+    if (darkMode) {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+    return () => root.classList.remove("dark");
+  }, [darkMode]);
+
   // 404 NOT FOUND PAGE
   const path = window.location.pathname;
   const VALID_PATHS = ["/"];
@@ -69,7 +80,7 @@ function App() {
         {/* REACT TOOLTIP */}
         <Tooltip
           id="social-tooltip"
-          className="!px-2.5 !py-1 !text-sm !rounded-lg !dark:bg-white !dark:text-black"
+          className="!px-2.5 !py-1 !text-sm !rounded-lg !dark:bg-white !dark:text-black z-50"
         />
       </DotBackground>
     </div>

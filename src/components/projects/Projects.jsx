@@ -29,8 +29,8 @@ const Projects = () => {
 
   const categories = [
     { id: "all", label: "All" },
-    { id: "frontend", label: "Frontend" },
     { id: "full-stack", label: "Fullstack" },
+    { id: "frontend", label: "Frontend" },
     { id: "in-progress", label: "In Progress" },
   ];
 
@@ -59,21 +59,26 @@ const Projects = () => {
           </div>
         ))}
       </div>
+
+      {/* Dialog modal*/}
       <div className="mt-12 w-full flex justify-center">
         <Dialog>
+          {/* More Projects btn */}
           <DialogTrigger asChild>
             <button className="px-4 py-1.5 text-neutral-900 dark:text-neutral-100 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-900 shadow-xs shadow-black dark:shadow-white border transition-all duration-300 active:scale-95">
               See more projects
             </button>
           </DialogTrigger>
-          <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto p-6 !bg-white dark:!bg-black">
+
+          {/* ALL PROJECTS */}
+          <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto bg-neutral-100/80 dark:bg-neutral-800/80">
             <DialogHeader className="mb-4">
               <DialogTitle className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
                 MORE PROJECTS
               </DialogTitle>
 
               {/* Category Filters */}
-              <div className="flex items-center justify-between border-b border-gray-300 dark:border-gray-700 pb-4">
+              <div className="flex items-center justify-between border-b border-gray-500 dark:border-gray-400 pb-4">
                 <div className="flex items-center gap-2 flex-wrap">
                   {categories.map((category) => (
                     <button
@@ -81,15 +86,15 @@ const Projects = () => {
                       onClick={() => setSelectedCategory(category.id)}
                       className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all ${
                         selectedCategory === category.id
-                          ? "bg-gray-900 dark:bg-white text-white dark:text-gray-900"
-                          : "bg-white dark:bg-gray-900 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+                          ? "bg-neutral-600 dark:bg-neutral-100 text-white dark:text-gray-900"
+                          : " text-gray-900 dark:text-white hover:bg-neutral-600 dark:hover:bg-neutral-100 hover:text-white dark:hover:text-black border !border-black dark:!border-white"
                       }`}
                     >
                       {category.label}
                     </button>
                   ))}
                 </div>
-                <span className="text-sm text-gray-600 dark:text-gray-400">
+                <span className="text-sm text-gray-600 dark:text-gray-300">
                   {filteredProjects.length} items
                 </span>
               </div>
