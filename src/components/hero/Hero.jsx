@@ -5,6 +5,7 @@ import { FiFileText } from "react-icons/fi";
 
 import { HeroButton } from "./HeroBtn";
 import { SocialLinks } from "../../data/socialLinks";
+import { GrLocation } from "react-icons/gr";
 
 const Hero = () => {
   // FRAMER MOTION VARIANTS
@@ -16,22 +17,27 @@ const Hero = () => {
     },
     tap: { scale: 1 },
   };
+  const Skill = ({ children }) => (
+    <span className="text-sm px-1.5 font-semibold border-[1px] border-neutral-500/70 border-dashed rounded-md bg-neutral-100 dark:bg-neutral-800 text-black dark:text-white">
+      {children}
+    </span>
+  );
 
   return (
     <div
       id="home"
-      className="min-h-screen flex flex-col md:flex-row justify-center items-center md:gap-5 text-gray-800 dark:text-gray-200"
+      className="min-h-screen mb-16 flex flex-col justify-center md:gap-5 text-gray-800 dark:text-gray-200"
     >
-      {/* Profile Image with Gradient Border */}
+      {/* Profile Image */}
       <motion.div
         initial={{ opacity: 0, x: -40 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="mt-12 md:ml-6 mb-5 md:mb-0 w-fit p-1 rounded-full"
+        className="mt-20 md:ml-6 mb-5 md:mb-0 w-fit p-1 rounded-full"
       >
         <img
-          className="w-36 md:w-56 rounded-full transition-all duration-300 ease-in-out bg-blue-300 dark:bg-zinc-300 hover:scale-105 cursor-pointer"
+          className="w-36 md:w-36 rounded-full transition-all duration-300 ease-in-out bg-blue-300 dark:bg-zinc-300 hover:scale-105 cursor-pointer"
           src="/hero.png"
         />
       </motion.div>
@@ -40,11 +46,11 @@ const Hero = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-start md:text-start ml-3 mr-2"
+        className="text-start md:text-start px-4 md:px-8"
       >
         {/* TITLE and DESCRIPTION */}
         <h1 className="text-3xl md:text-4xl font-bold text-gray-700 dark:text-white">
-          Hey, I'm Piyush Yadav. <br />
+          Hey, I'm Piyush 👋 -{" "}
           <TypingText
             duration={2}
             align="center"
@@ -53,20 +59,31 @@ const Hero = () => {
             A Full Stack developer.
           </TypingText>
         </h1>
-        <p className="mt-3 font-semibold dark:font-medium text-[17px] text-gray-700 dark:text-gray-400 max-w-xl">
-          I build scalable and efficient web applications from front to back.
-          Passionate about creating seamless user experiences with modern
-          technologies like React.js, Next.js, PostgreSQL and everything in
-          between.
+        <p className="mt-3 font-medium text-[17px] text-gray-700 dark:text-gray-400 ">
+          I build scalable and efficient web applications from frontend to
+          backend.
+          <br />I specialize in <Skill>Typescript</Skill> ,{" "}
+          <Skill>Next.js</Skill> , <Skill>MERN</Skill> stack ,{" "}
+          <Skill>PostgreSQL</Skill> and many other technologies for creating
+          full-stack web applications.
+        </p>
+        <p className="mt-3 font-medium text-[17px] text-gray-700 dark:text-gray-400 ">
+          Full-stack by skill, but obsessed with learning new skills and I love
+          to play{" "}
+          <a
+            href="https://www.chess.com/member/ypiyush17"
+            target="_blank"
+            className="text-sm px-1.5 font-semibold border-[1px] border-neutral-500/70 border-dashed rounded-md bg-neutral-100 dark:bg-neutral-800 text-black dark:text-white cursor-pointer"
+          >
+            chess
+          </a>{" "}
+          .
         </p>
 
         {/* Location and Socials */}
         <div className="mt-4 flex justify-between items-center text-sm md:text-base">
           <span className="flex text-gray-800 dark:text-gray-400">
-            <img
-              className="w-5 h-5 bg-gray-300 dark:bg-gray-400 rounded"
-              src="/location.svg"
-            />
+            <GrLocation className="w-5 h-5" />
             &nbsp;Mumbai, India.
           </span>
 
