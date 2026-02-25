@@ -7,7 +7,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="w-full py-16 px-4 md:px-8 scroll-mt-8 border-y border-slate-200 dark:border-neutral-800"
+      className="w-full py-16 px-4 md:px-8 scroll-mt-8 border-y border-slate-200 dark:border-neutral-900"
     >
       <div className="container mx-auto text-start">
         <motion.h2

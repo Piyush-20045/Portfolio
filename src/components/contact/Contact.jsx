@@ -16,7 +16,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="py-16 flex flex-col justify-center items-center scroll-mt-8 border-y border-slate-200 dark:border-neutral-800"
+      className="py-16 flex flex-col justify-center items-center scroll-mt-8 border-y border-slate-200 dark:border-neutral-900"
     >
       {/* TITLE and DESCRIPTION */}
       <motion.div

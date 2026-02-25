@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { TypingText } from "../../ui/lightswind/typing-text";
 import { BsSend } from "react-icons/bs";
 import { FiFileText } from "react-icons/fi";
-
 import { HeroButton } from "./HeroBtn";
 import { SocialLinks } from "../../data/socialLinks";
 import { GrLocation } from "react-icons/gr";
+import { Tooltip } from "react-tooltip";
 
 const Hero = () => {
   // FRAMER MOTION VARIANTS
@@ -26,19 +26,43 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className="min-h-screen mb-16 flex flex-col justify-center md:gap-5 text-gray-800 dark:text-gray-200"
+      className="mt-18 mb-16 flex flex-col justify-center md:gap-5 text-gray-800 dark:text-gray-200"
     >
-      {/* Profile Image */}
+      {/* Header Image and Quote*/}
+      <div className="relative">
+        <img
+          src="/header.jpg"
+          alt="header image"
+          className="h-[180px] sm:h-[270px] w-full object-cover"
+        />
+        <div className="absolute inset-0 flex items-center justify-center px-4">
+          <p className="text-white text-base sm:text-xl italic font-logo text-center">
+            Just work hard, be kind, and be humble.
+          </p>
+        </div>
+      </div>
+
+      {/* Profile Image && Status*/}
       <motion.div
         initial={{ opacity: 0, x: -40 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="mt-20 md:ml-6 mb-5 md:mb-0 w-fit p-1 rounded-full"
+        className="relative -mt-16 md:-mt-20 md:ml-6 mb-5 md:mb-0 w-fit p-1 rounded-full z-20"
       >
         <img
-          className="w-36 md:w-36 rounded-full transition-all duration-300 ease-in-out bg-blue-300 dark:bg-zinc-300 hover:scale-105 cursor-pointer"
+          className="w-28 md:w-32 inline rounded-full transition-all duration-300 ease-in-out bg-blue-300 dark:bg-zinc-300 hover:scale-105 cursor-pointer"
           src="/hero.png"
+        />
+        <span
+          data-tooltip-id="status"
+          data-tooltip-content="Open to new freelance projects and collaborations"
+          className="absolute right-2 top-21 md:right-2.5 md:top-24 h-3 w-3 rounded-full border border-neutral-700 bg-emerald-400 glow-green animate-pulse"
+        ></span>
+        <Tooltip
+          id="status"
+          place="right"
+          className="!px-2.5 !py-1 !text-sm !rounded-lg !dark:bg-white !dark:text-black !max-w-48 z-50"
         />
       </motion.div>
       <motion.div

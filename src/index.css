@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=League+Spartan:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Shizuru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=League+Spartan:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import "tailwindcss";
 @import "./ui/lightswind.css";
 @custom-variant dark (&:where(.dark, .dark *));
@@ -9,6 +9,6 @@ body {
 
 @layer utilities {
     .font-logo {
-        font-family: "Shizuru", "Nunito";
+        font-family: "Instrument Serif", "Nunito";
     }
 }

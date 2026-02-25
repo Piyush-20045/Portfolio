@@ -64,7 +64,7 @@ function App() {
         fadeIntensity={80}
         className="h-full"
       >
-        <div className="mx-2 max-w-[850px] bg-white dark:bg-black">
+        <div className="mx-2 max-w-[850px] bg-white dark:bg-black md:border-x border-slate-100 dark:border-neutral-900">
           <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
           <Hero />
           <Experience />

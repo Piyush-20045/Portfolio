@@ -6,7 +6,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="w-full px-4 py-16 md:px-8 scroll-mt-20 border-y border-slate-200 dark:border-neutral-800"
+      className="w-full px-4 py-16 md:px-8 scroll-mt-20 border-y border-slate-200 dark:border-neutral-900"
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}

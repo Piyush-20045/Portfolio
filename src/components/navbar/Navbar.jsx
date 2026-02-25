@@ -9,7 +9,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 transition-transform duration-300 max-w-4xl mx-auto">
-      <div className="mt-0.5 mx-2 md:mx-6 px-4 md:px-6 py-3 rounded-md dark:shadow-lg dark:shadow-neutral-900 shadow-xl backdrop-blur-md">
+      <div className="mt-0.5 mx-1 md:mx-[23.5px] px-4 md:px-6 py-3 rounded-md dark:shadow-lg dark:shadow-neutral-900 shadow-xl backdrop-blur-md">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <a href="#home">
@@ -85,7 +85,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
       {/* Mobile Menu */}
       <div
-        className={`mt-1 mx-3 rounded-md md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+        className={`mt-1 mx-1 rounded-md md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
           isOpen ? "max-h-screen" : "max-h-0"
         }`}
       >
