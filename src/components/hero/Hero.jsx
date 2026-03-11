@@ -37,7 +37,7 @@ const Hero = () => {
         />
         <div className="absolute inset-0 flex items-center justify-center px-4">
           <p className="text-white text-base sm:text-xl italic font-logo text-center">
-            Just work hard, be kind, and be humble.
+            If it was easy, anyone could have done it.
           </p>
         </div>
       </div>
