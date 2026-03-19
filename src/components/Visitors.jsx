@@ -10,25 +10,29 @@ function Visitors() {
       if (hasRecorded.current) return;
       hasRecorded.current = true;
 
+      // Increment the counter on each visit
+      const now = Date.now();
+      const COOLDOWN_MS = 60 * 60 * 1000;
+      const STORAGE_KEY = "portfolio_last_visit_at";
+
+      let shouldIncrement = false;
+
       try {
-        // Increment the counter on each visit
-        const response = await fetch("/api/visits", {
-          method: "POST",
+        const last = Number(window.localStorage.getItem(STORAGE_KEY) || 0);
+        shouldIncrement = !Number.isFinite(last) || now - last >= COOLDOWN_MS;
+
+        const res = await fetch("/api/visits", {
+          method: shouldIncrement ? "POST" : "GET",
         });
-
-        if (!response.ok) {
-          throw new Error("Failed to record visit");
-        }
-
-        const data = await response.json();
+        const data = await res.json();
         setVisits(data.total);
-      } catch (error) {
-        console.error("Error recording visit:", error);
 
-        // Fallback: just get the count without incrementing
+        if (shouldIncrement)
+          window.localStorage.setItem(STORAGE_KEY, String(now));
+      } catch (error) {
         try {
-          const response = await fetch("/api/visits");
-          const data = await response.json();
+          const res = await fetch("/api/visits");
+          const data = await res.json();
           setVisits(data.total);
         } catch (fallbackError) {
           console.error("Fallback failed:", fallbackError);
