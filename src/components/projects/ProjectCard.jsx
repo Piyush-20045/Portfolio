@@ -79,9 +79,11 @@ const ProjectCard = ({ project, index }) => {
               {tech}
             </span>
           ))}
-          <span className="h-fit px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded text-gray-800 dark:text-gray-200">
-            {project.tags.length > 4 ? "+" + (project.tags.length - 4) : ""}
-          </span>
+          {project.tags.length > 4 && (
+            <span className="h-fit px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded text-gray-800 dark:text-gray-200">
+              +{project.tags.length - 4}
+            </span>
+          )}
         </div>
 
         {/* In Progress status */}

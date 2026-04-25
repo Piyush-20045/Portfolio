@@ -1,14 +1,17 @@
-import blognest from "../assets/projects/blognest.PNG";
-import myJournal from "../assets/projects/myJournal.PNG";
+import blognest from "../assets/projects/blognest.png";
+import myJournal from "../assets/projects/myJournal.png";
 import campX from "../assets/projects/CampX.png";
 import logofy from "../assets/projects/logofy.png"
 import linkits from "../assets/projects/linkits.png"
 import geminiClone from "../assets/projects/geminiClone.png"
+import codenest from "../assets/projects/code-nest.png"
+import pretext from "../assets/projects/pretext.png"
+
 
 export const projectsData = [
   {
     title: "Linkits",
-    description: "Linkits is a curated developer resources platform where users can discover useful tools, job platforms, interview prep resources, AI tools, and free courses — all in one place. It supports Google authentication and allows users to explore categorized links through a clean, minimal interface.",
+    description: "Linkits is a curated developer resources platform where users can discover useful tools, job platforms, interview prep resources, AI tools, and free courses, all in one place. It supports Google authentication and allows users to explore categorized links through a clean, minimal interface.",
     image: linkits,
     tags: [
       "Next.js",
@@ -18,10 +21,24 @@ export const projectsData = [
       "NextAuth",
       "Google OAuth",
     ],
-    liveUrl: "",
+    liveUrl: "https://linkits.piyushh.tech/",
     githubUrl: "https://github.com/Piyush-20045/linkits",
-    status: "In Progress",
-    category: "in-progress"
+    status: "",
+    category: "full-stack",
+    features: [
+      "Built a categorized directory of useful developer resources and tools",
+      "Implemented Google OAuth authentication using NextAuth",
+      "Created bookmark feature with personalized user dashboard",
+      "Designed animated homepage hero section using tsParticles",
+      "Responsive black and white modern UI with category filtering",
+    ],
+    whatILearned: [
+      "Implemented OAuth authentication flow with Google Sign-In",
+      "Learned how NextAuth MongoDB Adapter manages users and sessions",
+      "Understood difference between Mongoose and MongoDB Adapter use-cases",
+      "Built APIs with Next.js App Router and MongoDB integration",
+      "Improved state management, conditional UI rendering, and protected routes",
+    ],
   },
   {
     title: "Logofy",
@@ -128,6 +145,39 @@ export const projectsData = [
       "Implemented a rich text editor using React-Quill",
       "Added EmailJS integration for Contact page",
     ]
+  },
+  {
+    title: "CodeNest",
+    description: "A modern web development agency website built for a client to showcase services, portfolio work, pricing, testimonials, and contact details. Focused on clean UI, smooth user experience, and conversion-driven landing page design.",
+    image: codenest,
+    tags: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
+    liveUrl: "https://codenestt.vercel.app/",
+    githubUrl: "https://github.com/Piyush-20045/code-nest",
+    category: "vibe-coded",
+    features: [
+      "Modern landing page with hero, services, pricing, testimonials, and CTA sections",
+      "Responsive multi-page layout with About, Work, and Contact pages",
+      "Smooth animations and premium dark-themed UI design"
+    ],
+    whatILearned: [
+      "Building service-based websites with strong landing page structure",
+      "Creating responsive layouts and reusable UI sections",
+      "Improving design sense with modern animations and clean spacing"
+    ],
+  },
+  {
+    title: "Pretext Playground",
+    description: "A small interactive playground I built to try out Pretext - a text measurement library by Cheng Lou (creator of react-motion, ReasonML). Pretext bypasses expensive DOM reflows by calculating text layout using pure arithmetic, making real-time text wrapping possible at 60fps. I wanted to see what it feels like to build something with it, so I made this page where text reflows live around draggable objects.",
+    image: pretext,
+    tags: ["React", "Tailwind CSS", "Vanilla JS", "@chenglou/pretext"],
+    liveUrl: "https://pretext-playgroundd.vercel.app/",
+    githubUrl: "https://github.com/Piyush-20045/pretext-playground",
+    category: "vibe-coded",
+    features: ["Real-time text wrapping around draggable objects",
+      "Orb collision physics with explosion effects on click",
+      "Fully responsive with mobile-optimized layout",],
+    whatILearned: ["How Pretext decouples text measurement from the DOM using cached segment data and pure math",
+      "Building a requestAnimationFrame loop that ties physics, reflow, and rendering together"],
   },
   {
     title: "GeminiClone – Minimal AI Chat Interface",

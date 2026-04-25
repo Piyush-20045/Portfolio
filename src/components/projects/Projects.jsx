@@ -18,7 +18,7 @@ const Projects = () => {
     all: "all",
     frontend: "frontend",
     "full-stack": "full-stack",
-    "in-progress": "in-progress",
+    "vibe-coded": "vibe-coded",
   };
 
   // Filter projects based on selected category
@@ -31,7 +31,7 @@ const Projects = () => {
     { id: "all", label: "All" },
     { id: "full-stack", label: "Fullstack" },
     { id: "frontend", label: "Frontend" },
-    { id: "in-progress", label: "In Progress" },
+    { id: "vibe-coded", label: "Vibe Coded" },
   ];
 
   return (
