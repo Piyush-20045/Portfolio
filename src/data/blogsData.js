@@ -9,4 +9,14 @@ export const BlogsData = [
         link: "https://medium.com/@piyush9/top-9-vs-code-extensions-i-use-as-a-full-stack-web-developer-06b05dd68b01",
         isFeatured: true
     },
+    {
+        id: '2',
+        title: "The Simplest Explanation of Rendering Techniques Like CSR, SSR, SSG, ISR, and RSC",
+        desc: "A beginner-friendly explanation of modern rendering techniques in React and Next.js without confusing jargon.",
+        tags: ["React", "Next.js", "Web Development", "Frontend", "+1"],
+        date: "15-05-2026",
+        readTime: "4 min read",
+        link: "https://medium.com/@piyush9/the-simplest-explanation-of-rendering-techniques-like-csr-ssr-ssg-isr-and-rsc-fb28aa7cf3db",
+        isFeatured: true
+    },
 ];
