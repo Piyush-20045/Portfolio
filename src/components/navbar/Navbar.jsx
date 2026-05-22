@@ -21,10 +21,10 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden pl-20 text-gray-800 dark:text-white md:flex justify-center items-center space-x-7 lg:space-x-12">
+          <div className="hidden pl-20 text-gray-800 dark:text-white md:flex justify-center items-center space-x-12">
             {/* mapping navlilnks array */}
             {navLinksData.map((link) => (
-              <NavLink key={link.href} href={link.href}>
+              <NavLink key={link.href} href={link.href} icon={link.icon}>
                 {link.text}
               </NavLink>
             ))}
@@ -62,6 +62,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             <button
               onClick={() => {
                 setDarkMode(!darkMode);
+                new Audio("/click.mp3").play();
               }}
               className={`flex justify-center items-center md:ml-20 w-9 h-9 px-1 py-1 rounded-md cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-900 border border-neutral-200/60 dark:border-neutral-800 shadow shadow-black dark:shadow-white transition-all duration-300 ease-in-out active:scale-95 dark:active:shadow-none`}
             >
@@ -94,10 +95,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             <a
               key={link.href}
               href={link.href}
-              className="block py-2 font-semibold text-gray-700 dark:text-gray-300 transition-all duration-300 ease-in-out active:scale-95 active:underline"
+              className="flex items-center gap-2 py-2 font-semibold text-gray-700 dark:text-gray-300 transition-all duration-200 ease-in-out active:scale-95"
               onClick={() => setIsOpen(false)}
             >
-              {link.text}
+              <NavLink key={link.href} href={link.href} icon={link.icon}>
+                {link.text}
+              </NavLink>
             </a>
           ))}
         </div>

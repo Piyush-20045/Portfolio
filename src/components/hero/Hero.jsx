@@ -86,8 +86,8 @@ const Hero = () => {
         <p className="mt-3 font-medium text-[17px] text-gray-700 dark:text-gray-400 ">
           I build scalable and efficient web applications from frontend to
           backend.
-          <br />I specialize in <Skill>Typescript</Skill> ,{" "}
-          <Skill>Next.js</Skill> , <Skill>MERN</Skill> stack ,{" "}
+          <br />I specialize in <Skill>MERN</Skill> stack ,{" "}
+          <Skill>Next.js</Skill> , <Skill>Typescript</Skill> ,{" "}
           <Skill>PostgreSQL</Skill> and many other technologies for creating
           full-stack web applications.
         </p>
