@@ -65,7 +65,7 @@ const ProjectCard = ({ project, index }) => {
         </div>
 
         {/* Description */}
-        <p className="text-gray-700 dark:text-gray-300 font-medium line-clamp-3">
+        <p className="text-gray-700 dark:text-gray-300 font-medium line-clamp-2">
           {project.description}
         </p>
 
@@ -95,7 +95,7 @@ const ProjectCard = ({ project, index }) => {
             </div>
           </div>
         ) : (
-          <div className="w-full mt-2 flex justify-end">
+          <div className="w-full mt-1 flex justify-end">
             <Dialog>
               <DialogTrigger asChild>
                 {/* More details btn */}

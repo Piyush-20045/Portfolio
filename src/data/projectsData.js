@@ -6,6 +6,7 @@ import linkits from "../assets/projects/linkits.png"
 import geminiClone from "../assets/projects/geminiClone.png"
 import codenest from "../assets/projects/code-nest.png"
 import pretext from "../assets/projects/pretext.png"
+import brightCampus from "../assets/projects/brightCampus.jpeg"
 
 
 export const projectsData = [
@@ -147,13 +148,33 @@ export const projectsData = [
     ]
   },
   {
+    title: "BrightCampus",
+    description:
+      "A modern university landing page designed to showcase programmes, campus life, features, testimonials, admissions CTA, and contact information. Built with a clean academic UI, responsive layout, smooth scrolling, carousel interactions, and conversion-focused sections for prospective students.",
+    image: brightCampus,
+    tags: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
+    liveUrl: "https://bright-campus.vercel.app/",
+    githubUrl: "https://github.com/Piyush-20045/bright-campus",
+    category: "frontend",
+    features: [
+      "Responsive university landing page with hero, about, programmes, campus, features, testimonials, CTA, and footer sections",
+      "Interactive campus carousel, embedded YouTube video cards, sticky side buttons, and smooth anchor scrolling",
+      "Clean blue and teal themed UI with reusable components and mobile-friendly navigation"
+    ],
+    whatILearned: [
+      "Creating a complete landing page structure for an education/university website",
+      "Using reusable React components and constants to keep code simple and organized",
+      "Improving responsive design, section spacing, theme consistency, and interactive UI elements"
+    ],
+  },
+  {
     title: "CodeNest",
     description: "A modern web development agency website built for a client to showcase services, portfolio work, pricing, testimonials, and contact details. Focused on clean UI, smooth user experience, and conversion-driven landing page design.",
     image: codenest,
     tags: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
     liveUrl: "https://codenestt.vercel.app/",
     githubUrl: "https://github.com/Piyush-20045/code-nest",
-    category: "vibe-coded",
+    category: "frontend",
     features: [
       "Modern landing page with hero, services, pricing, testimonials, and CTA sections",
       "Responsive multi-page layout with About, Work, and Contact pages",
