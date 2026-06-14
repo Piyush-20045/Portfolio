@@ -51,8 +51,8 @@ const Hero = () => {
         className="relative -mt-16 md:-mt-20 md:ml-6 mb-5 md:mb-0 w-fit p-1 rounded-full z-20"
       >
         <img
-          className="w-28 md:w-32 inline rounded-full transition-all duration-300 ease-in-out bg-blue-300 dark:bg-zinc-300 hover:scale-105 cursor-pointer"
-          src="/hero.png"
+          className="w-28 md:w-32 inline rounded-full transition-all duration-300 ease-in-out bg-white dark:bg-black hover:scale-105 cursor-pointer"
+          src="/hero1.png"
         />
         <span
           data-tooltip-id="status"
