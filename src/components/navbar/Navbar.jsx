@@ -32,13 +32,14 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
           <div className="flex gap-4">
             {/* Mobile Menu Button */}
-            <div className="mt-1 md:hidden">
+            <div className="md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="focus:outline-none text-gray-800 dark:text-white"
+                className="neu-icon-btn p-1.5 rounded-lg flex items-center justify-center text-gray-800 dark:text-white cursor-pointer"
+                aria-label="Toggle Navigation Menu"
               >
                 <svg
-                  className="w-8 h-8"
+                  className="w-6 h-6"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -64,7 +65,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 setDarkMode(!darkMode);
                 new Audio("/click.mp3").play();
               }}
-              className={`flex justify-center items-center md:ml-20 w-9 h-9 px-1 py-1 rounded-md cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-900 border border-neutral-200/60 dark:border-neutral-800 shadow shadow-black dark:shadow-white transition-all duration-300 ease-in-out active:scale-95 dark:active:shadow-none`}
+              className="neu-icon-btn flex justify-center items-center md:ml-20 w-9 h-9 rounded-lg cursor-pointer text-gray-800 dark:text-gray-200 transition-all duration-300"
+              aria-label="Toggle Dark Mode"
             >
               <span
                 className={`p-1 transition-transform duration-300 ${

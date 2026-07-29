@@ -40,7 +40,7 @@ const ProjectCard = ({ project, index }) => {
           </h3>
 
           {/* Links */}
-          <div className="flex gap-2 text-gray-700 dark:text-gray-300">
+          <div className="flex gap-2 text-gray-700 dark:text-gray-300 items-center">
             {project.status === "In Progress" ? null : (
               <a
                 href={project.liveUrl}
@@ -48,8 +48,9 @@ const ProjectCard = ({ project, index }) => {
                 rel="noopener noreferrer"
                 data-tooltip-id="social-tooltip"
                 data-tooltip-content="Live"
+                className="neu-icon-btn w-8 h-8 rounded-full flex items-center justify-center text-gray-700 dark:text-gray-200"
               >
-                <BiGlobe size={24} />
+                <BiGlobe size={18} />
               </a>
             )}
             <a
@@ -58,8 +59,9 @@ const ProjectCard = ({ project, index }) => {
               rel="noopener noreferrer"
               data-tooltip-id="social-tooltip"
               data-tooltip-content="Source code"
+              className="neu-icon-btn w-8 h-8 rounded-full flex items-center justify-center text-gray-700 dark:text-gray-200"
             >
-              <FiGithub size={22} />
+              <FiGithub size={17} />
             </a>
           </div>
         </div>
@@ -74,13 +76,13 @@ const ProjectCard = ({ project, index }) => {
           {project.tags.slice(0, 4).map((tech, i) => (
             <span
               key={i}
-              className="h-fit px-1.5 py-1 bg-gray-200 dark:bg-gray-700 rounded text-gray-800 dark:text-gray-200"
+              className="h-fit px-2 py-1 bg-gray-200/80 dark:bg-neutral-800 rounded-md text-gray-800 dark:text-gray-200 font-medium"
             >
               {tech}
             </span>
           ))}
           {project.tags.length > 4 && (
-            <span className="h-fit px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded text-gray-800 dark:text-gray-200">
+            <span className="h-fit px-2 py-1 bg-gray-200/80 dark:bg-neutral-800 rounded-md text-gray-800 dark:text-gray-200 font-medium">
               +{project.tags.length - 4}
             </span>
           )}
@@ -89,9 +91,9 @@ const ProjectCard = ({ project, index }) => {
         {/* In Progress status */}
         {project.status === "In Progress" ? (
           <div className="w-full flex justify-end">
-            <div className="px-2 py-1 flex gap-1.5 text-sm font-medium text-gray-800 bg-teal-100 rounded-md">
-              <LuLoaderPinwheel className="w-4 h-4 animate-spin [animation-duration:5s] text-teal-600" />
-              <span className="text-gray-700">In Progress</span>
+            <div className="px-2.5 py-1 flex gap-1.5 text-sm font-medium text-teal-800 dark:text-teal-300 bg-teal-100 dark:bg-teal-950/60 rounded-lg">
+              <LuLoaderPinwheel className="w-4 h-4 animate-spin [animation-duration:5s] text-teal-600 dark:text-teal-400" />
+              <span>In Progress</span>
             </div>
           </div>
         ) : (
@@ -99,7 +101,7 @@ const ProjectCard = ({ project, index }) => {
             <Dialog>
               <DialogTrigger asChild>
                 {/* More details btn */}
-                <button className="flex items-center gap-2 text-gray-700 dark:text-gray-300 text-sm cursor-pointer hover:underline underline-offset-4 group">
+                <button className="neu-btn px-3.5 py-1.5 flex items-center gap-2 text-gray-800 dark:text-gray-200 text-xs font-semibold rounded-lg cursor-pointer group">
                   More details
                   <FaArrowRight className="transition-transform group-hover:translate-x-1" />
                 </button>

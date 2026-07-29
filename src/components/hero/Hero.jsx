@@ -112,7 +112,7 @@ const Hero = () => {
           </span>
 
           {/* Social Links Section */}
-          <div className="flex gap-2 md:gap-3 md:mr-12 text-gray-700 dark:text-gray-400">
+          <div className="flex gap-2.5 md:gap-3 flex-wrap text-gray-700 dark:text-gray-400">
             {SocialLinks.map((social) => {
               return (
                 <motion.a
@@ -120,7 +120,7 @@ const Hero = () => {
                   variants={socialIconVariants}
                   whileHover="hover"
                   whileTap="tap"
-                  className={`flex items-center font-medium text-gray-700 dark:text-white text-xl md:text-2xl transition-colors duration-300 ${social.hoverColor}`}
+                  className={`neu-icon-btn w-10 h-10 md:w-11 md:h-11 rounded-full flex items-center justify-center text-gray-700 dark:text-gray-200 text-lg md:text-xl transition-all duration-300 ${social.hoverColor}`}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -135,7 +135,7 @@ const Hero = () => {
         </div>
 
         {/* RESUME and GET-IN-TOUCH BUTTONS */}
-        <div className="mt-4 md:ml-0 flex gap-4">
+        <div className="mt-6 md:ml-0 flex gap-4 flex-wrap">
           <HeroButton
             link={
               "https://drive.google.com/file/d/1TSrr3pzfG4T4y8nwbYpYoEbwq4FerV69/view?usp=drive_link"
@@ -149,6 +149,7 @@ const Hero = () => {
             target={""}
             icon={<BsSend />}
             title={"Get in touch"}
+            primary={true}
           />
         </div>
       </motion.div>

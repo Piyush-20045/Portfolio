@@ -63,14 +63,14 @@ const ExperienceCard = ({ item }) => {
 
                 {/* Chevron */}
                 <div
-                  className={`text-slate-400 transition-transform duration-300 ${
+                  className={`neu-icon-btn p-1.5 rounded-lg text-slate-700 dark:text-slate-200 transition-transform duration-300 ${
                     isOpen ? "rotate-180" : ""
                   }`}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
+                    width="18"
+                    height="18"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"

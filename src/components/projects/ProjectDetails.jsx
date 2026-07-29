@@ -58,7 +58,7 @@ const ProjectDetails = ({ project = {} }) => {
               href={liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-2 flex justify-center items-center gap-2 text-sm font-base text-neutral-700 dark:text-neutral-300 rounded-md hover:bg-gray-200 dark:hover:bg-neutral-950 shadow-xs shadow-black dark:shadow-white transition-all duration-300 active:shadow-none active:scale-95"
+              className="neu-btn px-4 py-2 flex justify-center items-center gap-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 rounded-xl transition-all duration-300"
             >
               <BiGlobe size={18} />
               Visit
@@ -69,7 +69,7 @@ const ProjectDetails = ({ project = {} }) => {
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-2 py-1 flex justify-center items-center gap-2 text-sm font-base text-neutral-700 dark:text-neutral-300 rounded-md hover:bg-gray-200 dark:hover:bg-neutral-950 shadow-xs shadow-black dark:shadow-white transition-all duration-300 active:shadow-none active:scale-95"
+              className="neu-btn px-4 py-2 flex justify-center items-center gap-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 rounded-xl transition-all duration-300"
             >
               <FiGithub size={18} />
               Source Code

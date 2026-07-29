@@ -65,29 +65,29 @@ const Projects = () => {
         <Dialog>
           {/* More Projects btn */}
           <DialogTrigger asChild>
-            <button className="px-4 py-1.5 text-neutral-900 dark:text-neutral-100 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-900 shadow-xs shadow-black dark:shadow-white border transition-all duration-300 active:scale-95">
+            <button className="neu-btn px-6 py-2.5 text-neutral-900 dark:text-neutral-100 font-semibold rounded-xl cursor-pointer">
               See more projects
             </button>
           </DialogTrigger>
 
           {/* ALL PROJECTS */}
-          <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto bg-neutral-100/80 dark:bg-neutral-800/80">
+          <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto bg-neutral-100/90 dark:bg-neutral-900/90 backdrop-blur-md">
             <DialogHeader className="mb-4">
-              <DialogTitle className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
+              <DialogTitle className="mb-4 text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
                 MORE PROJECTS
               </DialogTitle>
 
               {/* Category Filters */}
-              <div className="flex items-center justify-between border-b border-gray-500 dark:border-gray-400 pb-4">
-                <div className="flex items-center gap-2 flex-wrap">
+              <div className="flex items-center justify-between border-b border-gray-300 dark:border-gray-800 pb-4">
+                <div className="flex items-center gap-3 flex-wrap">
                   {categories.map((category) => (
                     <button
                       key={category.id}
                       onClick={() => setSelectedCategory(category.id)}
-                      className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all ${
+                      className={`px-4 py-2 rounded-xl text-sm font-semibold cursor-pointer transition-all duration-200 ${
                         selectedCategory === category.id
-                          ? "bg-neutral-600 dark:bg-neutral-100 text-white dark:text-gray-900"
-                          : " text-gray-900 dark:text-white hover:bg-neutral-600 dark:hover:bg-neutral-100 hover:text-white dark:hover:text-black border !border-black dark:!border-white"
+                          ? "neu-pressed text-black dark:text-white font-bold"
+                          : "neu-btn text-gray-700 dark:text-gray-300"
                       }`}
                     >
                       {category.label}

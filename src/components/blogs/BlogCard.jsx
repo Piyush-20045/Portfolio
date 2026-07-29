@@ -43,15 +43,15 @@ const BlogCard = ({ blog, key }) => {
       </div>
 
       {/* Footer */}
-      <div className="pt-6 mt-auto border-t border-slate-300 dark:border-slate-800 flex items-center justify-between">
-        <div className="flex items-center gap-3 md:gap-4 text-slate-500 dark:text-slate-500 text-xs md:text-sm">
+      <div className="pt-4 mt-auto border-t border-slate-300 dark:border-slate-800 flex items-center justify-between">
+        <div className="flex items-center gap-3 md:gap-4 text-slate-500 dark:text-slate-500 text-xs md:text-[13px]">
           <div className="flex items-center gap-0.5 md:gap-1">
             <BiCalendar size={17} />
-            <span>{blog.date}</span>
+            <span className="pt-1">{blog.date}</span>
           </div>
           <div className="flex items-center gap-0.5 md:gap-1">
             <FiClock size={16} />
-            <span>{blog.readTime}</span>
+            <span className="pt-0.5">{blog.readTime}</span>
           </div>
         </div>
 
@@ -59,7 +59,7 @@ const BlogCard = ({ blog, key }) => {
           href={blog.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center md:gap-1 text-slate-600 md:text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white text-xs md:text-sm font-medium transition-colors"
+          className="neu-btn px-2.5 py-1.5 rounded-lg inline-flex items-center gap-1.5 text-slate-600 dark:text-slate-300 text-[12px] md:text-[13px] font-semibold transition-all cursor-pointer"
         >
           Read Article
           <svg

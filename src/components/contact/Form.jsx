@@ -57,7 +57,7 @@ const Form = () => {
         type="submit"
         className="w-full mt-3 px-6 py-2 flex justify-center items-center gap-3 text-md font-semibold text-white dark:text-gray-950 bg-black dark:bg-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-all duration-200 active:scale-95 cursor-pointer"
       >
-        <BsSend />
+        <BsSend className="text-lg" />
         Send Message
       </button>
     </form>

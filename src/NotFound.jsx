@@ -25,9 +25,9 @@ const NotFound = () => {
           {/* Action Button */}
           <button
             onClick={handleGoHome}
-            className="inline-flex items-center gap-2 px-6 py-4 font-semibold text-neutral-700 dark:text-neutral-300 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 shadow shadow-black dark:shadow-white transition-all duration-300 active:shadow-none active:scale-95 cursor-pointer"
+            className="neu-btn inline-flex items-center gap-2.5 px-6 py-3 font-semibold text-neutral-800 dark:text-neutral-200 rounded-xl transition-all duration-300 cursor-pointer"
           >
-            <IoMdReturnLeft />
+            <IoMdReturnLeft className="text-xl" />
             Back to Home
           </button>
         </div>
