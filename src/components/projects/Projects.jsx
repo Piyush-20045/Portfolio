@@ -9,6 +9,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "../../ui/lightswind/dialog";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -35,7 +36,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="px-4 md:px-8 py-20 scroll-mt-8">
+    <section id="projects" className="px-4 md:px-8 py-14 scroll-mt-8">
       <motion.div
         className="text-start mx-auto mb-10"
         initial={{ opacity: 0, y: 20 }}
@@ -43,10 +44,10 @@ const Projects = () => {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3">
+        <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white mb-3">
           My Projects
         </h2>
-        <p className="text-lg text-gray-800 dark:text-gray-300 font-semibold max-w-2xl">
+        <p className="text-lg text-gray-800 dark:text-gray-300 font-medium max-w-2xl">
           Here are some of the projects I'm proud of. Each one was a unique
           challenge and a great learning experience.
         </p>
@@ -65,8 +66,9 @@ const Projects = () => {
         <Dialog>
           {/* More Projects btn */}
           <DialogTrigger asChild>
-            <button className="neu-btn px-6 py-2.5 text-neutral-900 dark:text-neutral-100 font-semibold rounded-xl cursor-pointer">
+            <button className="neu-btn px-5 py-[9px] text-neutral-900 dark:text-neutral-100 font-semibold rounded-lg cursor-pointer flex items-center gap-2">
               See more projects
+              <FaArrowRightLong className="mt-0.5" />
             </button>
           </DialogTrigger>
 

@@ -16,7 +16,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="py-16 flex flex-col justify-center items-center scroll-mt-8 border-y border-slate-200 dark:border-neutral-900"
+      className="py-14 flex flex-col justify-center items-center scroll-mt-8 border-y border-slate-200 dark:border-neutral-800"
     >
       {/* TITLE and DESCRIPTION */}
       <motion.div
@@ -26,10 +26,10 @@ const Contact = () => {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl font-bold text-gray-800 dark:text-gray-200">
+        <h2 className="text-4xl font-semibold text-gray-800 dark:text-gray-200">
           Get In Touch!
         </h2>
-        <p className="mt-2 text-lg font-semibold text-gray-800 dark:text-gray-300">
+        <p className="mt-2 text-lg font-medium text-gray-800 dark:text-gray-300">
           Have a project in mind or just want to say hi? I'd love to hear from
           you.
         </p>
@@ -63,7 +63,7 @@ const Contact = () => {
         </div>
 
         {/* Social Links Section */}
-        <div className="flex justify-center gap-4 md:gap-5">
+        <div className="flex justify-center gap-2.5 md:gap-3.5">
           {SocialLinks.map((social, index) => (
             <motion.a
               variants={socialIconVariants}
@@ -73,7 +73,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               data-tooltip-id="social-tooltip"
               data-tooltip-content={social.label}
-              className={`text-gray-700 dark:text-white text-3xl md:text-4xl transition-colors duration-300 ${social.hoverColor}`}
+              className={`neu-icon-btn w-10 h-10 md:w-11 md:h-11 rounded-full flex items-center justify-center text-gray-700 dark:text-gray-200 text-lg md:text-xl transition-all duration-300 ${social.hoverColor}`}
               whileHover="hover"
               whileTap="tap"
             >

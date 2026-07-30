@@ -8,16 +8,19 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 transition-transform duration-300 max-w-4xl mx-auto">
-      <div className="mt-0.5 mx-1 md:mx-[23.5px] px-4 md:px-6 py-3 rounded-md dark:shadow-lg dark:shadow-neutral-900 shadow-xl backdrop-blur-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 transition-transform duration-300 max-w-[819px] mx-auto">
+      <div className="px-3 md:px-6 py-[11px] dark:shadow-lg dark:shadow-neutral-900 shadow-xl backdrop-blur-md">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <a href="#home">
-            <motion.img
+            {/* <motion.img
               className="h-11 w-11 bg-white rounded-md transition-all duration-300 ease-in-out hover:scale-90 dark:bg-neutral-950"
               src="/hero1.png"
               whileHover="hover"
-            />
+            /> */}
+            <span className="text-2xl font-semibold md:font-medium text-gray-800 dark:text-white font-logo">
+              PIYUSH
+            </span>
           </a>
 
           {/* Desktop Navigation */}

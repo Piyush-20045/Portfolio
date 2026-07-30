@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=League+Spartan:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pixelify+Sans:wght@400..700&display=swap');
 @import "tailwindcss";
 @import "./ui/lightswind.css";
 @custom-variant dark (&:where(.dark, .dark *));
@@ -9,7 +9,7 @@ body {
 
 @layer utilities {
     .font-logo {
-        font-family: "Instrument Serif", "Nunito";
+        font-family: "Pixelify Sans", "Nunito";
     }
 
     /* --- NEUMORPHISM (SOFT UI) DESIGN SYSTEM --- */
@@ -39,14 +39,14 @@ body {
     }
 
     /* Pressed / Inset Neumorphic State */
-    .neu-btn:active,
+    .neu-btn:hover,
     .neu-pressed {
         box-shadow: inset -3px -3px 7px rgba(255, 255, 255, 0.9),
             inset 3px 3px 7px rgba(163, 177, 198, 0.7) !important;
         transform: translateY(1px);
     }
 
-    .dark .neu-btn:active,
+    .dark .neu-btn:hover,
     .dark .neu-pressed {
         box-shadow: inset -3px -3px 7px rgba(255, 255, 255, 0.05),
             inset 3px 3px 7px rgba(0, 0, 0, 0.95) !important;
@@ -69,12 +69,12 @@ body {
             4px 4px 12px rgba(0, 0, 0, 0.9);
     }
 
-    .neu-btn-primary:active {
+    .neu-btn-primary:hover {
         box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.2),
             inset 2px 2px 6px rgba(0, 0, 0, 0.6) !important;
     }
 
-    .dark .neu-btn-primary:active {
+    .dark .neu-btn-primary:hover {
         box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.9),
             inset 2px 2px 6px rgba(148, 163, 184, 0.6) !important;
     }
@@ -103,12 +103,12 @@ body {
             4px 4px 10px rgba(0, 0, 0, 0.95);
     }
 
-    .neu-icon-btn:active {
+    .neu-icon-btn:hover {
         box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.9),
             inset 2px 2px 5px rgba(163, 177, 198, 0.7) !important;
     }
 
-    .dark .neu-icon-btn:active {
+    .dark .neu-icon-btn:hover {
         box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.05),
             inset 2px 2px 5px rgba(0, 0, 0, 0.9) !important;
     }

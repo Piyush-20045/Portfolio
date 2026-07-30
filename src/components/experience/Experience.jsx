@@ -6,7 +6,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="w-full px-4 py-16 md:px-8 scroll-mt-20 border-y border-slate-200 dark:border-neutral-900"
+      className="w-full px-4 py-14 md:px-8 scroll-mt-20 border-y border-slate-200 dark:border-neutral-800"
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -14,10 +14,10 @@ const Experience = () => {
         transition={{ delay:0.1, duration: 1, type: "spring" }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3">
+        <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white mb-3">
           Experience
         </h2>
-        <p className="text-lg text-gray-800 dark:text-gray-300 font-semibold mb-10 max-w-2xl">
+        <p className="text-lg text-gray-800 dark:text-gray-300 font-medium mb-10 max-w-2xl">
           My professional journey and hands-on experience
         </p>
       </motion.div>

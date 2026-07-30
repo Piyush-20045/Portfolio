@@ -26,7 +26,7 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className="mt-18 mb-16 flex flex-col justify-center md:gap-5 text-gray-800 dark:text-gray-200"
+      className="mt-14 mb-16 flex flex-col justify-center md:gap-5 text-gray-800 dark:text-gray-200"
     >
       {/* Header Image and Quote*/}
       <div className="relative">
@@ -48,7 +48,7 @@ const Hero = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="relative -mt-16 md:-mt-20 md:ml-6 mb-5 md:mb-0 w-fit p-1 rounded-full z-20"
+        className="relative -mt-16 md:-mt-22 md:ml-6 mb-5 md:mb-0 w-fit p-1 rounded-full z-20"
       >
         <img
           className="w-28 md:w-32 inline rounded-full transition-all duration-300 ease-in-out bg-white dark:bg-black hover:scale-105 cursor-pointer"
@@ -73,7 +73,7 @@ const Hero = () => {
         className="text-start md:text-start px-4 md:px-8"
       >
         {/* TITLE and DESCRIPTION */}
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-700 dark:text-white">
+        <h1 className="text-3xl md:text-4xl font-semibold text-gray-700 dark:text-white">
           Hey, I'm Piyush 👋 -{" "}
           <TypingText
             duration={2}
@@ -107,20 +107,22 @@ const Hero = () => {
         {/* Location and Socials */}
         <div className="mt-4 flex justify-between items-center text-sm md:text-base">
           <span className="flex text-gray-800 dark:text-gray-400">
-            <GrLocation className="w-5 h-5" />
+            <GrLocation className="w-4.5 h-4.5" />
             &nbsp;Mumbai, India.
           </span>
 
           {/* Social Links Section */}
           <div className="flex gap-2.5 md:gap-3 flex-wrap text-gray-700 dark:text-gray-400">
-            {SocialLinks.map((social) => {
+            {SocialLinks.map((social, index) => {
               return (
                 <motion.a
                   key={social.label}
                   variants={socialIconVariants}
                   whileHover="hover"
                   whileTap="tap"
-                  className={`neu-icon-btn w-10 h-10 md:w-11 md:h-11 rounded-full flex items-center justify-center text-gray-700 dark:text-gray-200 text-lg md:text-xl transition-all duration-300 ${social.hoverColor}`}
+                  className={`neu-icon-btn w-10 h-10 md:w-11 md:h-11 rounded-full items-center justify-center text-gray-700 dark:text-gray-200 text-lg md:text-xl transition-all duration-300 ${
+                    social.hoverColor
+                  } ${index >= 4 ? "hidden md:flex" : "flex"}`}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -135,7 +137,7 @@ const Hero = () => {
         </div>
 
         {/* RESUME and GET-IN-TOUCH BUTTONS */}
-        <div className="mt-6 md:ml-0 flex gap-4 flex-wrap">
+        <div className="mt-4 md:mt-3 md:ml-0 flex gap-4 flex-wrap">
           <HeroButton
             link={
               "https://drive.google.com/file/d/1TSrr3pzfG4T4y8nwbYpYoEbwq4FerV69/view?usp=drive_link"
