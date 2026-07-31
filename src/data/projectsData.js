@@ -7,6 +7,7 @@ import geminiClone from "../assets/projects/geminiClone.png"
 import codenest from "../assets/projects/code-nest.png"
 import pretext from "../assets/projects/pretext.png"
 import brightCampus from "../assets/projects/brightCampus.jpeg"
+import blackstudio from "../assets/projects/blackstudio.png"
 
 
 export const projectsData = [
@@ -168,8 +169,28 @@ export const projectsData = [
     ],
   },
   {
+    title: "BlackStudio",
+    description: "An agency website built for a client who is a video editor and a graphic designer. He wanted to showcase his services, portfolio work, testimonials, and contact details. Focused on clean UI, smooth user experience, and conversion-driven landing page design.",
+    image: blackstudio,
+    tags: ["Next.js", "React", "Tailwind CSS", "Cloudinary", "Framer Motion"],
+    liveUrl: "https://blackstudio.vercel.app/",
+    githubUrl: "https://github.com/DeathXError/blackstudio",
+    category: "frontend",
+    features: [
+      "Modern landing page with hero, about, services, work, and contact pages",
+      "Embedded youtube videos and stored reel videos in cloudinary to showcase in the work section",
+      "Responsive multi-page layout",
+      "Smooth animations and premium dark-themed UI design"
+    ],
+    whatILearned: [
+      "Using reusable React components and constants to keep code simple and organized",
+      "Improving responsive design, section spacing, theme consistency, and interactive UI elements",
+      "Data management using cloudinary to store and showcase videos as the instagram iframe isn't very convenient for client to update."
+    ],
+  },
+  {
     title: "CodeNest",
-    description: "A modern web development agency website built for a client to showcase services, portfolio work, pricing, testimonials, and contact details. Focused on clean UI, smooth user experience, and conversion-driven landing page design.",
+    description: "A web development agency website built for a client to showcase services, portfolio work, pricing, testimonials, and contact details. Focused on clean UI, smooth user experience, and conversion-driven landing page design.",
     image: codenest,
     tags: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
     liveUrl: "https://codenestt.vercel.app/",
