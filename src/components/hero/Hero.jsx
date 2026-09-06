@@ -7,7 +7,7 @@ import { SocialLinks } from "../../data/socialLinks";
 import { GrLocation } from "react-icons/gr";
 import { Tooltip } from "react-tooltip";
 
-const Hero = () => {
+const Hero = ({ darkMode }) => {
   // FRAMER MOTION VARIANTS
   const socialIconVariants = {
     hover: {
@@ -31,12 +31,16 @@ const Hero = () => {
       {/* Header Image and Quote*/}
       <div className="relative">
         <img
-          src="/header.jpg"
+          src={
+            darkMode
+              ? "/hero-images/header-dark.jpeg"
+              : "/hero-images/header-light.jpeg"
+          }
           alt="header image"
           className="h-[180px] sm:h-[270px] w-full object-cover"
         />
         <div className="absolute inset-0 flex items-center justify-center px-4">
-          <p className="text-white text-base sm:text-xl italic font-logo text-center">
+          <p className="mr-14 sm:mr-24 md:mr-44 mb-14 text-neutral-500 italic text-sm sm:text-lg font-logo text-start">
             If it was easy, anyone could have done it.
           </p>
         </div>
@@ -52,7 +56,7 @@ const Hero = () => {
       >
         <img
           className="w-28 md:w-32 inline rounded-full transition-all duration-300 ease-in-out bg-white dark:bg-black hover:scale-105 cursor-pointer"
-          src="/hero1.png"
+          src="/hero-images/hero.png"
         />
         <span
           data-tooltip-id="status"

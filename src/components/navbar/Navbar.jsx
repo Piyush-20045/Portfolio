@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { LuSun, LuMoon } from "react-icons/lu";
 import { NavLink, navLinksData } from "./NavLinkBtn";
 
@@ -8,8 +7,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 transition-transform duration-300 max-w-[819px] mx-auto">
-      <div className="px-3 md:px-6 py-[11px] dark:shadow-lg dark:shadow-neutral-900 shadow-xl backdrop-blur-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 transition-transform duration-300 max-w-[820px] mx-auto">
+      <div className="px-3 md:px-6 py-[11px] dark:shadow-neutral-900 backdrop-blur-md shadow-xs md:border-x border-slate-200 dark:border-neutral-800">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <a href="#home">
@@ -24,7 +23,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden pl-20 text-gray-800 dark:text-white md:flex justify-center items-center space-x-12">
+          <div className="hidden pl-20 text-gray-800 dark:text-white md:flex justify-center items-center font-geist-mono space-x-10">
             {/* mapping navlilnks array */}
             {navLinksData.map((link) => (
               <NavLink key={link.href} href={link.href} icon={link.icon}>
@@ -91,16 +90,16 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
       {/* Mobile Menu */}
       <div
-        className={`mt-1 mx-1 rounded-md md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+        className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
           isOpen ? "max-h-screen" : "max-h-0"
         }`}
       >
-        <div className="backdrop-blur-md py-2 pb-4 flex flex-col items-center space-y-4 border-b dark:border-b-white">
+        <div className="backdrop-blur-md dark:bg-neutral-900/30 py-2 pb-4 flex flex-col items-center font-geist-mono space-y-4 border-b dark:border-b-white">
           {navLinksData.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="flex items-center gap-2 py-2 font-semibold text-gray-700 dark:text-gray-300 transition-all duration-200 ease-in-out active:scale-95"
+              className="flex items-center gap-2 w-24 py-2 font-semibold text-gray-700 dark:text-gray-300 transition-all duration-200 ease-in-out active:scale-95"
               onClick={() => setIsOpen(false)}
             >
               <NavLink key={link.href} href={link.href} icon={link.icon}>

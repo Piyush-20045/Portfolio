@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&family=Geist:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pixelify+Sans:wght@400..700&display=swap');
 @import "tailwindcss";
 @import "./ui/lightswind.css";
 @custom-variant dark (&:where(.dark, .dark *));
@@ -10,6 +10,10 @@ body {
 @layer utilities {
     .font-logo {
         font-family: "Pixelify Sans", "Nunito";
+    }
+
+    .font-geist-mono {
+        font-family: "Geist Mono", "Nunito";
     }
 
     /* --- NEUMORPHISM (SOFT UI) DESIGN SYSTEM --- */

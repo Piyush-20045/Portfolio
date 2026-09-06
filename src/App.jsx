@@ -66,7 +66,7 @@ function App() {
       >
         <div className="max-w-[820px] bg-white dark:bg-black md:border-x border-slate-200 dark:border-neutral-800">
           <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-          <Hero />
+          <Hero darkMode={darkMode} />
           <Experience />
           <Projects />
           <Skills />
