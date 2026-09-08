@@ -3,6 +3,8 @@ import gmail from "../assets/socials/gmail.png";
 import github from "../assets/socials/github.png";
 import linkedin from "../assets/socials/linkedin.png";
 import medium from "../assets/socials/medium.png";
+import chess from "../assets/socials/chess.png";
+
 // SOCIAL ICONS DATA
 export const SocialLinks = [
   {
@@ -33,6 +35,12 @@ export const SocialLinks = [
     icon: <img src={medium} alt="Medium" className="w-8 md:w-9" />,
     href: "https://medium.com/@piyush9",
     label: "Medium",
+    hoverColor: "hover:text-black dark:hover:text-white",
+  },
+  {
+    icon: <img src={chess} alt="Chess" className="w-8 md:w-9" />,
+    href: "https://www.chess.com/member/ypiyushh",
+    label: "Chess",
     hoverColor: "hover:text-black dark:hover:text-white",
   },
 ];

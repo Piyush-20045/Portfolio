@@ -97,7 +97,7 @@ const ProjectCard = ({ project, index }) => {
             </div>
           </div>
         ) : (
-          <div className="w-full mt-1 flex justify-end">
+          <div className="w-full flex justify-end">
             <Dialog>
               <DialogTrigger asChild>
                 {/* More details btn */}

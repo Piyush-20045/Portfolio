@@ -1,88 +1,46 @@
-import { motion } from "framer-motion";
-import Form from "./Form";
 import { SocialLinks } from "../../data/socialLinks";
+import StatusDot from "../../ui/status-dot";
 
 const Contact = () => {
-  // FRAMER MOTION VARIANTS
-  const socialIconVariants = {
-    hover: {
-      scale: 1.2,
-      rotate: 5,
-      transition: { type: "spring", stiffness: 300 },
-    },
-    tap: { scale: 0.9 },
-  };
-
   return (
-    <div
+    <section
       id="contact"
-      className="py-14 flex flex-col justify-center items-center scroll-mt-8 border-y border-slate-200 dark:border-neutral-800"
+      className="scroll-mt-8 border-y border-slate-200 px-4 py-14 dark:border-neutral-800 md:px-8"
     >
-      {/* TITLE and DESCRIPTION */}
-      <motion.div
-        className="ml-4 md:ml-0 mb-4 text-start"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-      >
-        <h2 className="text-4xl font-semibold text-gray-800 dark:text-gray-200">
-          Get In Touch!
+      <div className="mx-auto max-w-xl text-center">
+        <h2 className="flex justify-center items-center gap-3 text-2xl font-semibold text-slate-900 dark:text-white md:text-3xl">
+          <StatusDot />
+          Let's connect
         </h2>
-        <p className="mt-2 text-lg font-medium text-gray-800 dark:text-gray-300">
-          Have a project in mind or just want to say hi? I'd love to hear from
-          you.
+        <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
+          Find me online, or reach out whenever you would like to start a
+          conversation.
         </p>
-      </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        className="w-11/12 md:w-4/6 lg:w-4/6 mx-3 mt-5 px-4 sm:px-6 md:px-12 py-8 flex flex-col gap-4 border border-gray-400 rounded-2xl"
-      >
-        {/* FORM */}
-        <Form />
-
-        {/* SPAN DESIGN */}
-        <div className="my-6">
-          <div className="relative">
-            <div
-              className="absolute inset-0 flex items-center"
-              aria-hidden="true"
-            >
-              <div className="w-full border-t border-gray-300 dark:border-gray-600" />
-            </div>
-            <div className="relative flex justify-center text-sm">
-              <span className="px-3 bg-neutral-400 dark:bg-gray-300 dark:text-gray-600 text-gray-100 font-medium">
-                Or find me on
-              </span>
-            </div>
-          </div>
+        <div className="mt-9 flex items-center gap-4 text-xs font-medium uppercase text-slate-500 dark:text-slate-400">
+          <span className="h-px flex-1 bg-slate-200 dark:bg-neutral-800" />
+          Find me on
+          <span className="h-px flex-1 bg-slate-200 dark:bg-neutral-800" />
         </div>
 
-        {/* Social Links Section */}
-        <div className="flex justify-center gap-2.5 md:gap-3.5">
+        <div className="mt-7 flex flex-wrap justify-center gap-3">
           {SocialLinks.map((social, index) => (
-            <motion.a
-              variants={socialIconVariants}
+            <a
               key={index}
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
               data-tooltip-id="social-tooltip"
               data-tooltip-content={social.label}
-              className={`neu-icon-btn w-10 h-10 md:w-11 md:h-11 rounded-full flex items-center justify-center text-gray-700 dark:text-gray-200 text-lg md:text-xl transition-all duration-300 ${social.hoverColor}`}
-              whileHover="hover"
-              whileTap="tap"
+              aria-label={social.label}
+              className={`neu-icon-btn flex size-11 items-center justify-center rounded-full text-lg text-slate-700 transition-transform duration-200 hover:-translate-y-0.5 dark:text-slate-200 ${social.hoverColor}`}
             >
               {social.icon}
-            </motion.a>
+            </a>
           ))}
         </div>
-      </motion.div>
-    </div>
+      </div>
+    </section>
   );
 };
 

@@ -20,7 +20,7 @@ const Blogs = () => {
         </p>
       </div>
 
-      <div className="border-y border-slate-200 dark:border-neutral-800">
+      <div className="border-y border-slate-100 dark:border-neutral-900">
         {featuredBlogs.map((blog) => (
           <BlogCard key={blog.id} blog={blog} />
         ))}

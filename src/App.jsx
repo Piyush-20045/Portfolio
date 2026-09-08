@@ -4,7 +4,6 @@ import Navbar from "./components/navbar/Navbar.jsx";
 import Projects from "./components/projects/Projects.jsx";
 import Skills from "./components/skills/Skills.jsx";
 import { useState, useEffect } from "react";
-import { ToastContainer } from "react-toastify";
 import { DotBackground } from "./ui/lightswind/grid-dot-backgrounds.tsx";
 import { Tooltip } from "react-tooltip";
 import Footer from "./components/Footer.jsx";
@@ -75,8 +74,6 @@ function App() {
           <Footer />
         </div>
 
-        {/* REACT TOASTIFY */}
-        <ToastContainer position="top-right" autoClose={3000} />
         {/* REACT TOOLTIP */}
         <Tooltip
           id="social-tooltip"
