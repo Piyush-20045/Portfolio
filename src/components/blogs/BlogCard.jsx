@@ -1,85 +1,47 @@
-import { motion } from "framer-motion";
 import { BiCalendar } from "react-icons/bi";
-import { FiClock } from "react-icons/fi";
+import { FiArrowUpRight, FiClock } from "react-icons/fi";
 
-const BlogCard = ({ blog, key }) => {
+const BlogCard = ({ blog }) => {
   return (
-    <motion.div
-      className="group flex flex-col h-full bg-gray-100 dark:bg-neutral-900 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-5 border border-slate-200 dark:border-slate-800"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: key * 0.1, duration: 1, type: "spring" }}
-    >
-      {/* Badge */}
-      {blog.isFeatured && (
-        <div className="mb-4">
-          <span className="inline-block bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-md">
-            Featured
-          </span>
-        </div>
-      )}
-
-      {/* Content */}
-      <div className="flex-1">
-        <h3 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3 leading-tight group-hover:text-black dark:group-hover:text-neutral-400 transition-colors">
+    <article className="group grid gap-5 border-b border-slate-200 py-6 last:border-b-0 dark:border-neutral-800 md:grid-cols-[minmax(0,1fr)_auto] md:items-center md:gap-7">
+      <div className="min-w-0">
+        <h3 className="text-xl font-semibold leading-tight text-slate-900 transition-colors group-hover:text-slate-600 dark:text-white dark:group-hover:text-slate-300">
           {blog.title}
         </h3>
-        <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-600 dark:text-slate-400">
           {blog.desc}
         </p>
 
-        {/* Tags */}
-        <div className="flex flex-wrap gap-2 mb-6">
-          {blog.tags.map((tag, index) => (
-            <span
-              key={index}
-              className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-slate-300"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* Footer */}
-      <div className="pt-4 mt-auto border-t border-slate-300 dark:border-slate-800 flex items-center justify-between">
-        <div className="flex items-center gap-3 md:gap-4 text-slate-500 dark:text-slate-500 text-xs md:text-[13px]">
-          <div className="flex items-center gap-0.5 md:gap-1">
-            <BiCalendar size={17} />
-            <span className="pt-1">{blog.date}</span>
+        <div className="flex justify-between">
+          <div className="mt-2.5 flex items-center gap-4 h-fit text-xs font-medium text-slate-500 dark:text-slate-400 md:gap-5">
+            {/* Date and readTime */}
+            <div className="flex items-center gap-1.5 whitespace-nowrap">
+              <BiCalendar size={16} aria-hidden="true" />
+              <span>{blog.date}</span>
+            </div>
+            <div className="flex items-center gap-1.5 whitespace-nowrap">
+              <FiClock size={15} aria-hidden="true" />
+              <span>{blog.readTime}</span>
+            </div>
           </div>
-          <div className="flex items-center gap-0.5 md:gap-1">
-            <FiClock size={16} />
-            <span className="pt-0.5">{blog.readTime}</span>
-          </div>
-        </div>
 
-        <a
-          href={blog.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="neu-btn px-2.5 py-1.5 rounded-lg inline-flex items-center gap-1.5 text-slate-600 dark:text-slate-300 text-[12px] md:text-[13px] font-semibold transition-all cursor-pointer"
-        >
-          Read Article
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="transition-transform group-hover:translate-x-1"
+          {/* Read Article Btn */}
+          <a
+            href={blog.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="neu-btn flex w-fit shrink-0 items-center gap-2 justify-self-end rounded-lg px-3.5 py-2 text-xs font-medium text-slate-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 dark:text-slate-200 dark:focus-visible:outline-white"
           >
-            <path d="M5 12h14" />
-            <path d="m12 5 7 7-7 7" />
-          </svg>
-        </a>
+            Read Article
+            <FiArrowUpRight
+              size={14}
+              aria-hidden="true"
+              className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            />
+          </a>
+        </div>
       </div>
-    </motion.div>
+    </article>
   );
 };
 

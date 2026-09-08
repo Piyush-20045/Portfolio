@@ -66,9 +66,9 @@ const Projects = () => {
         <Dialog>
           {/* More Projects btn */}
           <DialogTrigger asChild>
-            <button className="neu-btn px-5 py-[9px] text-neutral-900 dark:text-neutral-100 font-semibold rounded-lg cursor-pointer flex items-center gap-2">
+            <button className="neu-btn px-4 py-[9px] text-slate-700 dark:text-slate-200 text-sm font-semibold rounded-lg flex items-center gap-2 cursor-pointer">
               See more projects
-              <FaArrowRightLong className="mt-0.5" />
+              <FaArrowRightLong size={12} />
             </button>
           </DialogTrigger>
 
