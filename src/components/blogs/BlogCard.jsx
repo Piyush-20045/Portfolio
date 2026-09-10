@@ -8,12 +8,12 @@ const BlogCard = ({ blog }) => {
         <h3 className="text-xl font-semibold leading-tight text-slate-900 transition-colors group-hover:text-slate-600 dark:text-white dark:group-hover:text-slate-300">
           {blog.title}
         </h3>
-        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-600 dark:text-neutral-400">
           {blog.desc}
         </p>
 
         <div className="flex justify-between">
-          <div className="mt-2.5 flex items-center gap-4 h-fit text-xs font-medium text-slate-500 dark:text-slate-400 md:gap-5">
+          <div className="mt-2.5 flex items-center gap-4 h-fit text-xs font-medium text-slate-500 dark:text-neutral-400 md:gap-5">
             {/* Date and readTime */}
             <div className="flex items-center gap-1.5 whitespace-nowrap">
               <BiCalendar size={16} aria-hidden="true" />

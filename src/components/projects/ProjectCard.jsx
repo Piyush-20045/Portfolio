@@ -17,7 +17,7 @@ const ProjectCard = ({ project, index }) => {
   return (
     <motion.div
       key={index}
-      className="bg-gray-100 dark:bg-neutral-900 rounded-xl shadow-none overflow-hidden hover:shadow-md transition-shadow duration-300 border-2 border-gray-200 dark:border-gray-950"
+      className="bg-gray-50 dark:bg-neutral-950 rounded-xl shadow-none overflow-hidden hover:shadow-sm transition-shadow duration-300 border border-gray-200 dark:border-neutral-800!"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -27,12 +27,12 @@ const ProjectCard = ({ project, index }) => {
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-48 object-cover"
+          className="px-1.5 py-1.5 rounded-[17px] w-full h-48 object-cover"
         />
       </Lens>
 
       {/* Content */}
-      <div className="h-fit p-5">
+      <div className="h-fit p-4 pt-3">
         <div className="flex justify-between">
           {/* Title */}
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 line-clamp-1">
@@ -48,7 +48,7 @@ const ProjectCard = ({ project, index }) => {
                 rel="noopener noreferrer"
                 data-tooltip-id="social-tooltip"
                 data-tooltip-content="Live"
-                className="neu-icon-btn w-8 h-8 rounded-full flex items-center justify-center text-gray-700 dark:text-gray-200"
+                className="neu-icon-btn w-8 h-8 rounded-full flex items-center justify-center text-gray-700 dark:text-gray-200 shadow-md!"
               >
                 <BiGlobe size={18} />
               </a>
@@ -59,7 +59,7 @@ const ProjectCard = ({ project, index }) => {
               rel="noopener noreferrer"
               data-tooltip-id="social-tooltip"
               data-tooltip-content="Source code"
-              className="neu-icon-btn w-8 h-8 rounded-full flex items-center justify-center text-gray-700 dark:text-gray-200"
+              className="neu-icon-btn w-8 h-8 rounded-full flex items-center justify-center text-gray-700 dark:text-gray-200 shadow-md!"
             >
               <FiGithub size={17} />
             </a>
@@ -76,13 +76,13 @@ const ProjectCard = ({ project, index }) => {
           {project.tags.slice(0, 4).map((tech, i) => (
             <span
               key={i}
-              className="h-fit px-2 py-1 bg-gray-200/80 dark:bg-neutral-800 rounded-md text-gray-800 dark:text-gray-200 font-medium"
+              className="h-fit px-2 py-0.5 bg-gray-200/20 dark:bg-neutral-900/50 rounded-md text-gray-700 dark:text-gray-300 border dark:border-neutral-800! shadow-xs"
             >
               {tech}
             </span>
           ))}
           {project.tags.length > 4 && (
-            <span className="h-fit px-2 py-1 bg-gray-200/80 dark:bg-neutral-800 rounded-md text-gray-800 dark:text-gray-200 font-medium">
+            <span className="h-fit px-2 py-0.5 bg-gray-200/20 dark:bg-neutral-900/50 rounded-md text-gray-700 dark:text-gray-300 border dark:border-slate-50 shadow-xs">
               +{project.tags.length - 4}
             </span>
           )}
@@ -101,7 +101,7 @@ const ProjectCard = ({ project, index }) => {
             <Dialog>
               <DialogTrigger asChild>
                 {/* More details btn */}
-                <button className="neu-btn px-3.5 py-1.5 flex items-center gap-2 text-gray-800 dark:text-gray-200 text-xs font-semibold rounded-lg cursor-pointer group">
+                <button className="neu-btn px-3.5 py-1.5 flex items-center gap-2 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-lg cursor-pointer shadow-md! group">
                   More details
                   <FaArrowRight className="transition-transform group-hover:translate-x-1" />
                 </button>

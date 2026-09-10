@@ -9,7 +9,7 @@ const Blogs = () => {
   const remainingBlogs = BlogsData.slice(0, -2);
 
   return (
-    <section className="w-full px-4 py-14 md:px-8 scroll-mt-8">
+    <section id="blog" className="w-full px-4 py-14 md:px-8 scroll-mt-8">
       {/* TITLE and DESC */}
       <div>
         <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white mb-3">

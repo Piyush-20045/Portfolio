@@ -12,12 +12,12 @@ const Contact = () => {
           <StatusDot />
           Let's connect
         </h2>
-        <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
+        <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-neutral-400">
           Find me online, or reach out whenever you would like to start a
           conversation.
         </p>
 
-        <div className="mt-9 flex items-center gap-4 text-xs font-medium uppercase text-slate-500 dark:text-slate-400">
+        <div className="mt-9 flex items-center gap-4 text-xs font-medium uppercase text-slate-500 dark:text-neutral-400">
           <span className="h-px flex-1 bg-slate-200 dark:bg-neutral-800" />
           Find me on
           <span className="h-px flex-1 bg-slate-200 dark:bg-neutral-800" />

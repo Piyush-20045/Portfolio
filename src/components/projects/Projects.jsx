@@ -53,7 +53,7 @@ const Projects = () => {
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 gap-10">
+      <div className="grid md:grid-cols-2 gap-6 md:gap-10">
         {projectsData.slice(0, 4).map((project, index) => (
           <div key={index}>
             <ProjectCard project={project} index={index} />

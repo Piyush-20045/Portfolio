@@ -30,8 +30,8 @@ export const navLinksData = [
     icon: "/nav-icons/skills.svg",
   },
   {
-    href: "#contact",
-    text: "Contact",
-    icon: "/nav-icons/contact.svg",
+    href: "#blog",
+    text: "Blogs",
+    icon: "/nav-icons/blog.svg",
   },
 ];

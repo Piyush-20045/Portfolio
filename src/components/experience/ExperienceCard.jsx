@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { BiGlobe } from "react-icons/bi";
+import { LuBriefcaseBusiness } from "react-icons/lu";
 
 const ExperienceCard = ({ item }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,44 +26,51 @@ const ExperienceCard = ({ item }) => {
 
         {/* Right Side: Content Card */}
         <div className="flex-grow w-full">
-          <div className="bg-slate-50 dark:bg-neutral-900/50 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 transition-all duration-200 overflow-hidden">
+          <div className="bg-slate-50 dark:bg-neutral-900/40 rounded-2xl border border-slate-200 dark:border-neutral-900! hover:border-slate-300 dark:hover:border-slate-600 transition-all duration-200 overflow-hidden">
             {/* Header / Trigger Area */}
             <div
               onClick={() => setIsOpen(!isOpen)}
-              className="p-5 md:p-6 cursor-pointer flex justify-between items-start select-none"
+              className="cursor-pointer select-none p-4 md:flex md:items-start md:justify-between md:p-5"
             >
-              <div className="flex gap-4 items-center">
-                <div className="w-10 h-10 rounded-lg bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-700 flex items-center justify-center flex-shrink-0">
-                  <BiGlobe
+              <div className="flex min-w-0 items-center gap-3 md:gap-4">
+                <div className="w-10 h-10 rounded-lg bg-white dark:bg-neutral-900 shadow-sm border border-slate-100 dark:border-slate-700 flex items-center justify-center flex-shrink-0">
+                  <LuBriefcaseBusiness
                     size={22}
                     className="text-slate-700 dark:text-slate-300"
                   />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <h3 className="text-lg md:text-xl font-bold text-slate-900 dark:text-white leading-tight">
                     {item.role}
                   </h3>
-                  <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 mt-1">
-                    <span className="font-medium">{item.company}</span>
-                    <span>•</span>
-                    <span className="bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-2 py-0.5 rounded text-xs">
+                  <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-slate-600 dark:text-slate-300">
+                    <span className="font-medium whitespace-nowrap">
+                      {item.company}
+                    </span>
+                    <span className="hidden md:inline" aria-hidden="true">
+                      •
+                    </span>
+                    <span className="bg-slate-200 dark:bg-neutral-900 text-slate-700 dark:text-slate-300 px-2 py-0.5 rounded text-xs">
                       {item.location}
                     </span>
                   </div>
                 </div>
               </div>
 
-              <div className="flex flex-col items-end gap-1 pl-2">
-                {/* Mobile Date */}
-                <div className="md:hidden text-right mb-1">
-                  <span className="text-xs font-bold text-slate-700 dark:text-slate-300 block">
+              <div className="mt-4 flex items-center justify-between gap-4 border-t border-slate-200 pt-3 dark:border-neutral-800 md:mt-0 md:flex-col md:items-end md:gap-1 md:border-0 md:p-0">
+                {/* date and type of job for MOBILE screen */}
+                <div className="flex flex-col md:hidden text-xs text-slate-500 dark:text-slate-400 md:text-right">
+                  <span className="block whitespace-nowrap font-bold text-slate-700 dark:text-slate-300">
                     {item.date}
+                  </span>
+                  <span className="mt-0.5 block font-medium md:mt-1">
+                    {item.type}
                   </span>
                 </div>
 
                 {/* Chevron */}
                 <div
-                  className={`neu-icon-btn p-1.5 rounded-lg text-slate-700 dark:text-slate-200 transition-transform duration-300 ${
+                  className={`neu-icon-btn shrink-0 p-1.5 rounded-lg text-slate-700 dark:text-slate-200 transition-transform duration-300 ${
                     isOpen ? "rotate-180" : ""
                   }`}
                 >
@@ -94,7 +101,7 @@ const ExperienceCard = ({ item }) => {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                 >
                   <div className="px-5 md:px-6 pb-6 pt-0">
-                    <div className="h-px w-full bg-slate-200 dark:bg-slate-700 mb-4"></div>
+                    <div className="h-px w-full bg-slate-200 dark:bg-neutral-900 mb-4"></div>
 
                     {/* Bullet Points */}
                     <ul className="space-y-2 mb-6 ml-1">
@@ -111,14 +118,14 @@ const ExperienceCard = ({ item }) => {
 
                     {/* Technologies */}
                     <div>
-                      <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-3">
+                      <h4 className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-3">
                         Technologies
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {item.technologies.map((tech, idx) => (
                           <span
                             key={idx}
-                            className="px-3 py-1 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-semibold shadow-sm"
+                            className="px-3 py-1 rounded-md bg-white dark:bg-neutral-900 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 text-xs font-semibold shadow-sm"
                           >
                             {tech}
                           </span>
