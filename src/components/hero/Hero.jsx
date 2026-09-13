@@ -55,7 +55,7 @@ const Hero = ({ darkMode }) => {
         className="relative -mt-16 md:-mt-22 md:ml-6 mb-5 md:mb-0 w-fit p-1 rounded-full z-20"
       >
         <img
-          className="w-28 md:w-32 inline rounded-full transition-all duration-300 ease-in-out bg-white dark:bg-black hover:scale-105 cursor-pointer"
+          className="w-28 md:w-32 inline rounded-full bg-white dark:bg-black hover:scale-105 cursor-pointer"
           src="/hero-images/hero.png"
         />
         <span
@@ -124,7 +124,7 @@ const Hero = ({ darkMode }) => {
                   variants={socialIconVariants}
                   whileHover="hover"
                   whileTap="tap"
-                  className={`neu-icon-btn w-10 h-10 md:w-11 md:h-11 rounded-full items-center justify-center text-gray-700 dark:text-gray-200 text-lg md:text-xl transition-all duration-300 ${
+                  className={`neu-icon-btn w-10 h-10 md:w-11 md:h-11 rounded-full items-center justify-center text-gray-700 dark:text-gray-200 text-lg md:text-xl ${
                     social.hoverColor
                   } ${index >= 4 ? "hidden md:flex" : "flex"}`}
                   href={social.href}

@@ -7,6 +7,11 @@ body {
     font-family: "Nunito", "League Spartan";
 }
 
+/* GitHub heatmap day tooltip must float above all page content */
+.react-activity-calendar__tooltip {
+    z-index: 9999;
+}
+
 @layer utilities {
     .font-logo {
         font-family: "Pixelify Sans", "Nunito";
@@ -23,7 +28,6 @@ body {
         background-color: #f0f3f8;
         box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9),
             4px 4px 10px rgba(163, 177, 198, 0.6);
-        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .dark .neu-btn {
@@ -35,11 +39,13 @@ body {
     .neu-btn:hover {
         box-shadow: -5px -5px 12px rgba(255, 255, 255, 1),
             5px 5px 12px rgba(163, 177, 198, 0.75);
+        transition: box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .dark .neu-btn:hover {
         box-shadow: -5px -5px 12px rgba(255, 255, 255, 0.07),
             5px 5px 12px rgba(0, 0, 0, 0.95);
+        transition: box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     /* Pressed / Inset Neumorphic State */
@@ -48,6 +54,8 @@ body {
         box-shadow: inset -3px -3px 7px rgba(255, 255, 255, 0.9),
             inset 3px 3px 7px rgba(163, 177, 198, 0.7) !important;
         transform: translateY(1px);
+        transition: box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+            transform 0.1s ease-out;
     }
 
     .dark .neu-btn:hover,
@@ -55,6 +63,8 @@ body {
         box-shadow: inset -3px -3px 7px rgba(255, 255, 255, 0.05),
             inset 3px 3px 7px rgba(0, 0, 0, 0.95) !important;
         transform: translateY(1px);
+        transition: box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+            transform 0.1s ease-out;
     }
 
     /* Neumorphic Primary Highlight CTA Button */
@@ -63,7 +73,6 @@ body {
         color: #ffffff;
         box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.8),
             4px 4px 12px rgba(15, 23, 42, 0.4);
-        transition: all 0.25s ease;
     }
 
     .dark .neu-btn-primary {
@@ -76,11 +85,13 @@ body {
     .neu-btn-primary:hover {
         box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.2),
             inset 2px 2px 6px rgba(0, 0, 0, 0.6) !important;
+        transition: box-shadow 0.25s ease;
     }
 
     .dark .neu-btn-primary:hover {
         box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.9),
             inset 2px 2px 6px rgba(148, 163, 184, 0.6) !important;
+        transition: box-shadow 0.25s ease;
     }
 
     /* Neumorphic Icon Button (Circular / Rounded) */
@@ -88,7 +99,6 @@ body {
         background-color: #f0f3f8;
         box-shadow: -3px -3px 8px rgba(255, 255, 255, 0.9),
             3px 3px 8px rgba(163, 177, 198, 0.6);
-        transition: all 0.2s ease;
     }
 
     .dark .neu-icon-btn {
@@ -100,20 +110,24 @@ body {
     .neu-icon-btn:hover {
         box-shadow: -4px -4px 10px rgba(255, 255, 255, 1),
             4px 4px 10px rgba(163, 177, 198, 0.75);
+        transition: box-shadow 0.2s ease;
     }
 
     .dark .neu-icon-btn:hover {
         box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.08),
             4px 4px 10px rgba(0, 0, 0, 0.95);
+        transition: box-shadow 0.2s ease;
     }
 
     .neu-icon-btn:hover {
         box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.9),
             inset 2px 2px 5px rgba(163, 177, 198, 0.7) !important;
+        transition: box-shadow 0.2s ease;
     }
 
     .dark .neu-icon-btn:hover {
         box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.05),
             inset 2px 2px 5px rgba(0, 0, 0, 0.9) !important;
+        transition: box-shadow 0.2s ease;
     }
 }

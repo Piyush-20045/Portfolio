@@ -63,7 +63,7 @@ function App() {
         fadeIntensity={80}
         className="h-full"
       >
-        <div className="max-w-[820px] bg-white dark:bg-black md:border-x border-slate-200 dark:border-neutral-800">
+        <div className="mx-auto w-full min-w-0 max-w-[820px] bg-white dark:bg-black md:border-x border-slate-200 dark:border-neutral-800">
           <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
           <Hero darkMode={darkMode} />
           <Experience />

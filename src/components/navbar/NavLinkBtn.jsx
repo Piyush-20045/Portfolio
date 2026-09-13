@@ -2,12 +2,9 @@
 export const NavLink = ({ href, icon, children }) => (
   <a
     href={href}
-    className="relative flex items-center gap-[5px] group font-normal text-[14px] text-neutral-700 dark:text-neutral-300 hover:text-neutral-950 dark:hover:text-neutral-50 transition-colors duration-200"
+    className="relative flex items-center gap-[5px] group font-normal text-[14px] text-neutral-700 dark:text-neutral-300 hover:text-neutral-950 dark:hover:text-neutral-50"
   >
-    <img
-      src={icon}
-      className="pb-0.5 w-4.5 h-4.5 transition-all duration-200 ease-in-out dark:invert"
-    />
+    <img src={icon} className="pb-0.5 w-4.5 h-4.5 dark:invert" />
     {children}
   </a>
 );

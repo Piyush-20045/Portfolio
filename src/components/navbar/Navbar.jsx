@@ -7,7 +7,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 transition-transform duration-300 max-w-[820px] mx-auto">
+    <nav className="fixed top-0 left-0 right-0 z-50 max-w-[820px] mx-auto">
       <div className="px-3 md:px-6 py-[11px] dark:shadow-neutral-900 backdrop-blur-md shadow-xs md:border-x border-slate-200 dark:border-neutral-800">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -90,7 +90,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+        className={`md:hidden overflow-hidden ${
           isOpen ? "max-h-screen" : "max-h-0"
         }`}
       >
@@ -99,7 +99,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             <a
               key={link.href}
               href={link.href}
-              className="flex items-center gap-2 w-24 py-2 font-semibold text-gray-700 dark:text-gray-300 transition-all duration-200 ease-in-out active:scale-95"
+              className="flex items-center gap-2 w-24 py-2 font-semibold text-gray-700 dark:text-gray-300 active:scale-95"
               onClick={() => setIsOpen(false)}
             >
               <NavLink key={link.href} href={link.href} icon={link.icon}>

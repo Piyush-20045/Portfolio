@@ -26,7 +26,7 @@ const ExperienceCard = ({ item }) => {
 
         {/* Right Side: Content Card */}
         <div className="flex-grow w-full">
-          <div className="bg-slate-50 dark:bg-neutral-900/40 rounded-2xl border border-slate-200 dark:border-neutral-900! hover:border-slate-300 dark:hover:border-slate-600 transition-all duration-200 overflow-hidden">
+          <div className="bg-slate-50 dark:bg-neutral-900/40 rounded-2xl border border-slate-200 dark:border-neutral-900! hover:border-slate-300 dark:hover:border-slate-600 overflow-hidden">
             {/* Header / Trigger Area */}
             <div
               onClick={() => setIsOpen(!isOpen)}

@@ -5,7 +5,7 @@ const BlogCard = ({ blog }) => {
   return (
     <article className="group grid gap-5 border-b border-slate-100 py-6 last:border-b-0 dark:border-neutral-900 md:grid-cols-[minmax(0,1fr)_auto] md:items-center md:gap-7">
       <div className="min-w-0">
-        <h3 className="text-xl font-semibold leading-tight text-slate-900 transition-colors group-hover:text-slate-600 dark:text-white dark:group-hover:text-slate-300">
+        <h3 className="text-xl font-semibold leading-tight text-slate-900 group-hover:text-slate-600 dark:text-white dark:group-hover:text-slate-300">
           {blog.title}
         </h3>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-600 dark:text-neutral-400">

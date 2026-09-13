@@ -90,7 +90,7 @@ export const GridBackground = ({
         />
       )}
 
-      <div className="relative z-20">{children}</div>
+      <div className="relative z-20 w-full min-w-0">{children}</div>
     </div>
   );
 };
@@ -183,7 +183,7 @@ export const DotBackground = ({
         />
       )}
 
-      <div className="relative z-20">{children}</div>
+      <div className="relative z-20 w-full min-w-0">{children}</div>
     </div>
   );
 };
