@@ -2,7 +2,7 @@ import blognest from "../assets/projects/blognest.png";
 import myJournal from "../assets/projects/myJournal.png";
 import campX from "../assets/projects/CampX.png";
 import logofy from "../assets/projects/logofy.png"
-import linkits from "../assets/projects/linkits.png"
+import linkits from "../assets/projects/linkits.jpeg"
 import geminiClone from "../assets/projects/geminiClone.png"
 import codenest from "../assets/projects/code-nest.png"
 import pretext from "../assets/projects/pretext.png"
@@ -13,33 +13,38 @@ import blackstudio from "../assets/projects/blackstudio.png"
 export const projectsData = [
   {
     title: "Linkits",
-    description: "Linkits is a curated developer resources platform where users can discover useful tools, job platforms, interview prep resources, AI tools, and free courses, all in one place. It supports Google authentication and allows users to explore categorized links through a clean, minimal interface.",
+    description: "Linkits is a full-stack curated directory of 600+ tools and resources across 27 categories, AI tools, design resources, etc - filterable by category, platform, and signup requirement, with personal bookmark collections.",
     image: linkits,
     tags: [
       "Next.js",
       "TypeScript",
       "Tailwind CSS",
       "MongoDB",
+      "Mongoose",
       "NextAuth",
       "Google OAuth",
+      "PostHog",
     ],
-    liveUrl: "https://linkits.piyushh.tech/",
+    liveUrl: "https://linkits.site/",
     githubUrl: "https://github.com/Piyush-20045/linkits",
     status: "",
     category: "full-stack",
     features: [
-      "Built a categorized directory of useful developer resources and tools",
-      "Implemented Google OAuth authentication using NextAuth",
-      "Created bookmark feature with personalized user dashboard",
-      "Designed animated homepage hero section using tsParticles",
-      "Responsive black and white modern UI with category filtering",
+      "600+ tools across 27 categories (tools + resources), with per-category counts",
+      "Search, sorting, category filters, platform filters, and no-signup filters",
+      "Bookmark tools and organize them into personal collections",
+      "Submit tool suggestion via a 3-field form - Telegram notifications for manual review",
+      "ISR-cached directory (5 min), lazy-loaded images, manual 'show more' loading to stay light on bandwidth",
+      "Responsive UI with dark mode and lightweight image loading",
     ],
     whatILearned: [
-      "Implemented OAuth authentication flow with Google Sign-In",
-      "Learned how NextAuth MongoDB Adapter manages users and sessions",
-      "Understood difference between Mongoose and MongoDB Adapter use-cases",
-      "Built APIs with Next.js App Router and MongoDB integration",
-      "Improved state management, conditional UI rendering, and protected routes",
+      "Implemented Google OAuth authentication using NextAuth and MongoDB Adapter",
+      "When to use the raw MongoDB driver vs. Mongoose in the same app (adapter/auth queries vs. modeled domain data)",
+      "Implemented ISR and caching for public pages while keeping personal data uncached",
+      "Image delivery economics: why proxying hundreds of external images through Vercel Image Optimization burns quota, and when unoptimized + browser/CDN caching is the right call",
+      "Improving API design to reduce bulk scraping while accepting that publicly displayed data can't be completely protected.",
+      "PostHog Analytics to track useful actions like clicks, saves, and searches instead of collecting everything by default",
+      "Keeping a growing client page manageable by extracting hooks and presentational modules into separate files",
     ],
   },
   {
