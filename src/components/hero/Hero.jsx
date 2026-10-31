@@ -26,7 +26,7 @@ const Hero = ({ darkMode }) => {
   return (
     <div
       id="home"
-      className="mt-14 mb-16 flex flex-col justify-center md:gap-5 text-gray-800 dark:text-gray-200"
+      className="mt-14 mb-16 flex flex-col justify-center md:gap-3 text-gray-800 dark:text-gray-200"
     >
       {/* Header Image and Quote*/}
       <div className="relative">
@@ -52,17 +52,20 @@ const Hero = ({ darkMode }) => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="relative -mt-16 md:-mt-22 md:ml-6 mb-5 md:mb-0 w-fit p-1 rounded-full z-20"
+        className="relative -mt-16 md:-mt-20 md:ml-6 mb-3 md:mb-0 w-fit p-1 rounded-full z-20"
       >
-        <img
-          className="w-28 md:w-32 inline rounded-full bg-white dark:bg-black hover:scale-105 cursor-pointer"
-          src="/hero-images/hero.png"
-        />
-        <span
-          data-tooltip-id="status"
-          data-tooltip-content="Open to new freelance projects and collaborations"
-          className="absolute right-2 top-21 md:right-2.5 md:top-24 h-3 w-3 rounded-full border border-neutral-700 bg-emerald-400 glow-green animate-pulse"
-        ></span>
+        <div className="relative inline-block cursor-pointer transition-transform duration-300 ease-out hover:scale-105">
+          <img
+            className="block w-28 md:w-32 rounded-full bg-white dark:bg-black"
+            src="/hero-images/hero.png"
+            alt="Piyush Yadav"
+          />
+          <span
+            data-tooltip-id="status"
+            data-tooltip-content="Open to new freelance projects and collaborations"
+            className="absolute right-[4%] bottom-[17%] h-3 w-3 rounded-full border border-neutral-700 bg-emerald-400 glow-green animate-pulse"
+          ></span>
+        </div>
         <Tooltip
           id="status"
           place="right"

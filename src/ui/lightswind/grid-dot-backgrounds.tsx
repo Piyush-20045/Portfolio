@@ -26,11 +26,7 @@ export const GridBackground = ({
   const [currentGridColor, setCurrentGridColor] = useState(gridColor);
 
   useEffect(() => {
-    const prefersDarkMode =
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const isDarkModeActive =
-      document.documentElement.classList.contains("dark") || prefersDarkMode;
+    const isDarkModeActive = document.documentElement.classList.contains("dark");
     setCurrentGridColor(isDarkModeActive ? darkGridColor : gridColor);
 
     const observer = new MutationObserver(function (mutations) {
@@ -117,32 +113,10 @@ export const DotBackground = ({
   fadeIntensity = 20,
   ...props
 }: DotBackgroundProps) => {
-  const [currentDotColor, setCurrentDotColor] = useState(dotColor);
-
-  useEffect(() => {
-    const prefersDarkMode =
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const isDarkModeActive =
-      document.documentElement.classList.contains("dark") || prefersDarkMode;
-    setCurrentDotColor(isDarkModeActive ? darkDotColor : dotColor);
-
-    const observer = new MutationObserver(function (mutations) {
-      mutations.forEach(function (mutation) {
-        if (mutation.attributeName === "class") {
-          const updatedIsDarkModeActive =
-            document.documentElement.classList.contains("dark");
-          setCurrentDotColor(updatedIsDarkModeActive ? darkDotColor : dotColor);
-        }
-      });
-    });
-
-    observer.observe(document.documentElement, { attributes: true });
-
-    return function () {
-      return observer.disconnect();
-    };
-  }, [dotColor, darkDotColor]);
+  const patternStyle = (color: string): React.CSSProperties => ({
+    backgroundSize: `${spacing}px ${spacing}px`,
+    backgroundImage: `radial-gradient(${color} ${dotSize}px, transparent ${dotSize}px)`,
+  });
 
   return (
     <div
@@ -152,20 +126,8 @@ export const DotBackground = ({
       )}
       {...props}
     >
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundSize: spacing + "px " + spacing + "px", // String concatenation
-          backgroundImage:
-            "radial-gradient(" +
-            currentDotColor +
-            " " +
-            dotSize +
-            "px, transparent " +
-            dotSize +
-            "px)", // String concatenation
-        }}
-      />
+      <div className="absolute inset-0 dark:hidden" style={patternStyle(dotColor)} />
+      <div className="absolute inset-0 hidden dark:block" style={patternStyle(darkDotColor)} />
 
       {showFade && (
         <div
