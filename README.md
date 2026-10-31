@@ -1,6 +1,6 @@
 # Piyush Yadav's Portfolio
 
-Personal portfolio built with Next.js App Router, React, Tailwind CSS, and Framer Motion. The homepage contains the existing introduction, experience, projects, skills, blogs, contact links, visitor counter, and local portfolio guide.
+Personal portfolio built with Next.js App Router, React, Tailwind CSS, and Framer Motion. The homepage contains the existing introduction, experience, projects, skills, blogs, contact links, and visitor counter.
 
 ## Run locally
 
@@ -41,12 +41,6 @@ INSERT INTO visits (id, count) VALUES (1, 0);
 ```
 
 Without `DATABASE_URL`, the counter stays hidden and the API returns 503; the rest of the portfolio works normally.
-
-## Portfolio guide
-
-The bottom-right guide runs entirely in the browser. It requires no API key, backend, or paid AI service. It is a keyword-based FAQ assistant, not generative AI, and it does not send chat messages to a service.
-
-Edit `src/data/chatbotProfile.js` for the introduction, availability, location, interests, resume link, and custom answers. It also reads the existing project, skill, experience, blog, and social link data files. Add only public information because these files are included in the browser bundle. Unknown questions receive a fallback response.
 
 ## Deploy
 

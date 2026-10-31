@@ -11,7 +11,6 @@ import { Tooltip } from "react-tooltip";
 import Footer from "./components/Footer.jsx";
 import Blogs from "./components/blogs/Blogs.jsx";
 import Experience from "./components/experience/Experience.jsx";
-import Chatbot from "./components/chatbot/Chatbot.jsx";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -63,7 +62,6 @@ function App() {
           className="!px-2.5 !py-1 !text-sm !rounded-lg !dark:bg-white !dark:text-black z-50"
         />
       </DotBackground>
-      <Chatbot />
     </div>
   );
 }
