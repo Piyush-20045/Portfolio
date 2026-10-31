@@ -25,7 +25,7 @@ const ProjectCard = ({ project, index }) => {
       {/* Image */}
       <Lens zoomFactor={2} lensSize={150}>
         <img
-          src={project.image}
+          src={project.image.src}
           alt={project.title}
           className="px-1.5 py-1.5 rounded-[17px] w-full h-48 object-cover"
         />

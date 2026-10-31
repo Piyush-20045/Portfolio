@@ -104,7 +104,7 @@ const SkillCard = ({ name, src, isEdit = false }) => {
       {/* ICONS */}
       <div className="relative flex items-center justify-center pointer-events-none">
         <img
-          src={src}
+          src={src.src}
           alt={`${name} Icon`}
           className="w-5 h-5 drop-shadow-sm rounded"
         />

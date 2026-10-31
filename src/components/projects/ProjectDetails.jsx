@@ -18,7 +18,7 @@ const ProjectDetails = ({ project = {} }) => {
       {/* Main Image */}
       <div className="w-full">
         <img
-          src={image}
+          src={image.src}
           alt={title}
           className="w-full h-64 md:h-80 object-cover rounded-lg shadow-md"
         />

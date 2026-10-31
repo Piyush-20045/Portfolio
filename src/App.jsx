@@ -1,3 +1,5 @@
+"use client";
+
 import Contact from "./components/contact/Contact.jsx";
 import Hero from "./components/hero/Hero.jsx";
 import Navbar from "./components/navbar/Navbar.jsx";
@@ -9,43 +11,24 @@ import { Tooltip } from "react-tooltip";
 import Footer from "./components/Footer.jsx";
 import Blogs from "./components/blogs/Blogs.jsx";
 import Experience from "./components/experience/Experience.jsx";
-import NotFound from "./NotFound.jsx";
+import Chatbot from "./components/chatbot/Chatbot.jsx";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(() => {
-    const saved = localStorage.getItem("darkMode");
-    return saved === "true"; // convert string to boolean
-  });
+  const [darkMode, setDarkMode] = useState(false);
+  const [themeReady, setThemeReady] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem("darkMode", darkMode);
-  }, [darkMode]);
+    setDarkMode(localStorage.getItem("darkMode") === "true");
+    setThemeReady(true);
+  }, []);
 
   // Sync dark class to <html> so portaled content (e.g. Dialog) gets dark: styles
   useEffect(() => {
+    if (!themeReady) return;
     const root = document.documentElement;
-    if (darkMode) {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
-    return () => root.classList.remove("dark");
-  }, [darkMode]);
-
-  // 404 NOT FOUND PAGE
-  const path = window.location.pathname;
-  const VALID_PATHS = ["/"];
-  if (!VALID_PATHS.includes(path)) {
-    return (
-      <div
-        className={`${
-          darkMode ? "dark" : ""
-        } bg-gray-50 dark:bg-gray-950 transition-all duration-300`}
-      >
-        <NotFound />;
-      </div>
-    );
-  }
+    root.classList.toggle("dark", darkMode);
+    localStorage.setItem("darkMode", String(darkMode));
+  }, [darkMode, themeReady]);
 
   return (
     <div
@@ -80,6 +63,7 @@ function App() {
           className="!px-2.5 !py-1 !text-sm !rounded-lg !dark:bg-white !dark:text-black z-50"
         />
       </DotBackground>
+      <Chatbot />
     </div>
   );
 }

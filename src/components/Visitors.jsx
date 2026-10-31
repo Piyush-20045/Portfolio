@@ -29,7 +29,7 @@ function Visitors() {
 
         if (shouldIncrement)
           window.localStorage.setItem(STORAGE_KEY, String(now));
-      } catch (error) {
+      } catch {
         try {
           const res = await fetch("/api/visits");
           const data = await res.json();

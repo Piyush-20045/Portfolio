@@ -1,10 +1,6 @@
 import { IoMdReturnLeft } from "react-icons/io";
 
 const NotFound = () => {
-  const handleGoHome = () => {
-    window.location.href = "/";
-  };
-
   return (
     <div className="p-6 min-h-screen flex flex-col items-center justify-center bg-white dark:bg-black overflow-hidden relative">
       <div className="mt-12 md:mt-0 max-w-5xl w-full grid lg:grid-cols-2 gap-12 items-center relative z-10">
@@ -23,13 +19,13 @@ const NotFound = () => {
           </div>
 
           {/* Action Button */}
-          <button
-            onClick={handleGoHome}
+          <a
+            href="/"
             className="neu-btn inline-flex items-center gap-2.5 px-6 py-3 font-semibold text-neutral-800 dark:text-neutral-200 rounded-xl transition-all duration-300 cursor-pointer"
           >
             <IoMdReturnLeft className="text-xl" />
             Back to Home
-          </button>
+          </a>
         </div>
 
         {/* Right Side - 404 Image */}
