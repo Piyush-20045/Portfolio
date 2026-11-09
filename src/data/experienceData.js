@@ -1,18 +1,28 @@
 export const ExperienceData = [
     {
         id: '1',
-        role: "Frontend Developer Intern",
+        role: "Full Stack Developer",
         company: "SocialMoon",
-        type: "Remote",
+        type: "Full-time · Remote",
         date: "Aug 2026 - Present",
         location: "Lucknow, India",
         bullets: [
-            "Developed responsive frontend interfaces for a product which is a multi-role talent marketplace using Next.js, React, TypeScript, Tailwind CSS, and shadcn/ui.",
-            "Converted 40+ Figma designs/components into reusable, responsive React components, covering landing pages, authentication, dashboards, project exploration, and proposal interfaces.",
-            "Structured route-specific components and folder architecture using the Next.js App Router, keeping the frontend organized and scalable as the application grows.",
-            "Collaborated with the development team to understand product and UI requirements and used Git/GitHub for version control and team collaboration.",
+            "Promoted from Frontend Developer Intern to Full Stack Developer after completing the internship.",
+            "Redesigned the company's website with a Neo-Brutalist design, creating a new visual identity with bold typography, custom layouts, and responsive UI.",
+            "Converted 40+ Figma designs into reusable and responsive React components for a multi-role talent marketplace, covering dashboards, authentication, and proposal interfaces.",
+            "Built different UI experiences for multiple client projects using Next.js, React, TypeScript, and Tailwind CSS based on project requirements and design references.",
+            "Worked on company platforms, including the careers portal and support portal, improving their layouts and building reusable components.",
+            "Collaborated with the team to develop and improve web applications, maintain frontend code, and deliver features using Git and GitHub."
         ],
-        technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React", "Figma", "Git/Github"]
+        technologies: [
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Tailwind CSS",
+            "shadcn/ui",
+            "Figma",
+            "Git/GitHub"
+        ]
     },
     {
         id: '1',

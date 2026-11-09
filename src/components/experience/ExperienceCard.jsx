@@ -13,9 +13,9 @@ const ExperienceCard = ({ item }) => {
       transition={{ delay: 0.1, duration: 1, type: "spring" }}
       viewport={{ once: true }}
     >
-      <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-start group">
+      <div className="group flex flex-col items-start gap-4 md:flex-row md:gap-6">
         {/* Left Side: Date & Logo (Desktop) */}
-        <div className="hidden md:flex flex-col items-end w-48 flex-shrink-0 pt-1 text-right">
+        <div className="hidden w-36 shrink-0 flex-col items-end pt-2.5 text-right md:flex">
           <span className="text-sm font-bold text-slate-900 dark:text-slate-200">
             {item.date}
           </span>

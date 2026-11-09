@@ -1,6 +1,6 @@
 import blognest from "../assets/projects/blognest.png";
 import myJournal from "../assets/projects/myJournal.png";
-import campX from "../assets/projects/CampX.png";
+import campX from "../assets/projects/campx.jpeg";
 import logofy from "../assets/projects/logofy.png"
 import linkits from "../assets/projects/linkits.jpeg"
 import geminiClone from "../assets/projects/geminiClone.png"
