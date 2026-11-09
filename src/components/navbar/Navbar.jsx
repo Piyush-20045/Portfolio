@@ -96,16 +96,15 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       >
         <div className="backdrop-blur-md dark:bg-neutral-900/30 py-2 pb-4 flex flex-col items-center font-geist-mono space-y-4 border-b dark:border-b-white">
           {navLinksData.map((link) => (
-            <a
+            <NavLink
               key={link.href}
               href={link.href}
-              className="flex items-center gap-2 w-24 py-2 font-semibold text-gray-700 dark:text-gray-300 active:scale-95"
+              icon={link.icon}
+              className="w-24 py-2 font-semibold active:scale-95"
               onClick={() => setIsOpen(false)}
             >
-              <NavLink key={link.href} href={link.href} icon={link.icon}>
-                {link.text}
-              </NavLink>
-            </a>
+              {link.text}
+            </NavLink>
           ))}
         </div>
       </div>
